@@ -1,9 +1,17 @@
 const prescribeNMetilGlucamine = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.NMETIL_CONTRACT, 'get_dose', { weight })
+  nearInterface.viewMethod(process.env.NMETIL_CONTRACT, process.env.CONTRACT_METHOD, { weight })
 );
 
 const prescribeSodiumStibogluconate = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.STIBOGLUCONATE_CONTRACT, 'get_dose', { weight })
+  nearInterface.viewMethod(process.env.STIBOGLUCONATE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
 );
 
-export { prescribeNMetilGlucamine, prescribeSodiumStibogluconate };
+const prescribePentamidineIsethionate = async (nearInterface, weight) => (
+  nearInterface.viewMethod(process.env.PENTAMIDINE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
+);
+
+export {
+  prescribeNMetilGlucamine,
+  prescribeSodiumStibogluconate,
+  prescribePentamidineIsethionate
+};

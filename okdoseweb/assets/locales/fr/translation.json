@@ -2,28 +2,52 @@
   "transmission_types": {
     "transmitted_by_vectors": "Transmission par Vecteur"
   },
+  "dosage_unit": "mg/kg/jour",
   "leishmaniasis": {
     "name": "Leishmaniose",
     "n_metil_glucamine": {
       "name": "Antimoniate de méglumine",
-      "presentation": "Amp 1500 mg * 5 ml (Sb5 + 405 mg)",
-      "dosage_unit": "mg/kg/jour",
+      "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
       "via": "IM",
       "frequency": "chaque jour",
-      "warning": "Maximum 20 ml par jour. Des doses plus élevées doivent être évaluées par un spécialiste"
+      "warning": "Maximum 20 ml par jour. Des doses plus élevées doivent être évaluées par un spécialiste",
+      "treatment_time": [
+        "Leishmaniose Cutanée: 20 jours",
+        "Leishmaniose Cutanéo-muqueuse: 28 jours",
+        "Leishmaniose Viscérale: 28 jours"
+      ]
     },
     "sodium_stibogluconate": {
       "name": "Stibogluconate de sodium",
-      "presentation": "Amp 100 mg/ml",
-      "dosage_unit": "mg/kg/jour",
+      "presentation": ["Amp 100 mg/ml", "20 $t(dosage_unit)"],
       "via": "IM",
       "frequency": "chaque jour",
-      "warning": "Maximum 6 ml par jour. Des doses plus élevées doivent être évaluées par un spécialiste"
+      "warning": "Maximum 6 ml par jour. Des doses plus élevées doivent être évaluées par un spécialiste",
+      "treatment_time": [
+        "Leishmaniose Cutanée: 20 jours",
+        "Leishmaniose Cutanéo-muqueuse: 28 jours",
+        "Leishmaniose Viscérale: 28 jours"
+      ]
     },
-    "types": {
-      "cl_treatment_time": "Leishmaniose Cutanée: 20 jours",
-      "ml_treatment_time": "Leishmaniose Cutanéo-muqueuse: 28 jours",
-      "vl_treatment_time": "Leishmaniose Viscérale: 28 jours"
+    "pentamidine_isethionate": {
+      "name": "Isétionate de pentamidine",
+      "presentation": ["Vial 300 mg, 60 mg/ml", "4 $t(dosage_unit)"],
+      "via": "IM",
+      "frequency": "chaque 3 jours",
+      "warning": "Maximum 5 ml par jour. Des doses plus élevées doivent être évaluées par un spécialiste",
+      "treatment_time": [
+        "Leishmaniose Cutanée: 4 doses",
+        "Leishmaniose Cutanéo-muqueuse: 7 to 15 doses",
+        "Leishmaniose Viscérale: 7 to 15 doses"
+      ],
+      "preparation": [
+        "Reconstituer chaque flacon avec 5 mL d'eau pour préparations injectables.",
+        "Prendre la glycémie et la pression artérielle chez le patient avant l'administration.",
+        "Appliquer le volume calculé IM.",
+        "En même temps, administrer par voie intraveineuse 100 à 200 mL de DAD à 5% pendant 30 min.",
+        "Observer pendant 1 heure le patient contrôlant les signes vitaux et la glucométrie.",
+        "Citer dans 48 heures pour la prochaine dose."
+      ]
     }
   }
 }

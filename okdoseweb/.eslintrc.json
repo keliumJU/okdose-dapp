@@ -1,18 +1,26 @@
 {
-  "env": {
-    "browser": true,
-    "es2022": true
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  "settings": {
+    "import/resolver": {
+      "babel-module": { "allowExistingDirectories": true }
+    },
+    "react": {
+        "version": "detect"
     }
   },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
   "extends": [
-    "airbnb",
+    "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["import", "react-hooks", "jsx-a11y"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "plugins": ["module-resolver", "import", "react-hooks", "jsx-a11y"],
   "rules": {
     "camelcase": ["error"],
     "quotes": ["error", "single"],
@@ -23,6 +31,9 @@
     "react/jsx-filename-extension": ["off"],
     "react/jsx-uses-vars": "error",
     "react/prop-types": ["warn"],
-    "import/no-relative-packages": ["off"]
+    "import/no-relative-packages": ["off"],
+    "module-resolver/use-alias": ["warn"],
+    "import/no-unresolved": ["error"]
+
   }
 }

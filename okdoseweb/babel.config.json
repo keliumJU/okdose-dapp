@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["."],
+      "extensions": [".js", ".jsx", ".ts", ".tsx"],
+      "alias": {
+        "@near-interface": "../okdose/near/near-interface",
+        "@leishmaniasis": "../okdose/transmissionTypes/transmittedByVectors/leishmaniasis",
+        "@near-wallet": "../okdose/near/near-wallet"
+      }
+    }]
+  ]
+}

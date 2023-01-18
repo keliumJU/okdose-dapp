@@ -2,28 +2,52 @@
   "transmission_types": {
     "transmitted_by_vectors": "Transmitted by Vectors"
   },
+  "dosage_unit": "mg/kg/día",
   "leishmaniasis": {
     "name": "Leishmaniasis",
     "n_metil_glucamine": {
       "name": "N-Metil Glucamine",
-      "presentation": "Amp 1500 mg * 5 ml (Sb5 + 405 mg)",
-      "dosage_unit": "mg/kg/day",
+      "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
       "via": "IM",
       "frequency": "daily",
-      "warning": "Maximum 20 ml per day. Larger doses require specialist evaluation."
+      "warning": "Maximum 20 ml per day. Larger doses require specialist evaluation.",
+      "treatment_time": [
+        "Cutaneous Leishmaniasis: 20 days",
+        "Mucocutaneous Leishmaniasis: 28 days",
+        "Visceral Leishmaniasis: 28 days"
+      ]
     },
     "sodium_stibogluconate": {
       "name": "Sodium stibogluconate",
-      "presentation": "Amp 100 mg/ml",
-      "dosage_unit": "mg/kg/day",
+      "presentation": ["Amp 100 mg/ml", "20 $t(dosage_unit)"],
       "via": "IM",
       "frequency": "daily",
-      "warning": "Maximum 6 ml per day. Larger doses require specialist evaluation."
+      "warning": "Maximum 6 ml per day. Larger doses require specialist evaluation.",
+      "treatment_time": [
+        "Cutaneous Leishmaniasis: 20 days",
+        "Mucocutaneous Leishmaniasis: 28 days",
+        "Visceral Leishmaniasis: 28 days"
+      ]
     },
-    "types": {
-      "cl_treatment_time": "Cutaneous Leishmaniasis: 20 days",
-      "ml_treatment_time": "Mucocutaneous Leishmaniasis: 28 days",
-      "vl_treatment_time": "Visceral Leishmaniasis: 28 days"
+    "pentamidine_isethionate": {
+      "name": "Pentamidine isethionate",
+      "presentation": ["Vial 300 mg, 60 mg/ml", "4 $t(dosage_unit)"],
+      "via": "IM",
+      "frequency": "each 3 days",
+      "warning": "Maximum 5 ml per day. Larger doses require specialist evaluation",
+      "treatment_time": [
+        "Cutaneous Leishmaniasis: 4 doses",
+        "Mucocutaneous Leishmaniasis: 7 to 15 doses",
+        "Visceral Leishmaniasis: 7 to 15 doses"
+      ],
+      "preparation": [
+        "Reconstitute each ampoule with 5 mL of water for injections.",
+        "Take blood glucose and blood pressure before administration.",
+        "Apply the calculated volume IM.",
+        "Concomitantly, administer IV 100 to 200 mL of 5% DAD for 30 min.",
+        "Observe the patient for 1 hour controlling vital signs and glucometry.",
+        "Cite in 48 hours for the next dose."
+      ]
     }
   }
 }

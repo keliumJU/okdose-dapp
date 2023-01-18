@@ -1,9 +1,8 @@
-// React
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import './i18n/i18n';
+import { Wallet } from '@near-wallet';
 import App from './App';
-import { Wallet } from '../okdose/near/near-wallet';
 
 const wallet = new Wallet({ createAccessKeyFor: process.env.MAIN_ACCOUNT });
 
