@@ -22,19 +22,6 @@ export default function App({ wallet }) {
       .catch(alert);
   };
 
-  const handleWeightDose = (dose) => {
-    console.log(typeof dose)
-    console.log(dose)
-    if (dose != null) {
-      if(dose.length > 1){
-        return (<p style={{backgroundColor: 'gray', color: 'white'}} >{`${dose[0]} ${t('to')} ${dose[1]} ${t(valueFromBlockchain.frequency)}`}</p>)
-      }else{
-        return (<p style={{backgroundColor: 'gray', color: 'white'}} >{`${dose[0]} ${t(valueFromBlockchain.frequency)}`}</p>)
-      }
-    }else{
-      return (<p style={{backgroundColor: 'red'}} >{'nothing'}</p>)
-    }
-  }
   return (
     <main>
       <input name="weight" onChange={handleWeight} placeholder="weight" />
@@ -42,14 +29,13 @@ export default function App({ wallet }) {
       <hr />
       <p>{ t('leishmaniasis.name') }</p>
       <p>{ t(valueFromBlockchain.name) }</p>
-      <p>{ valueFromBlockchain.weightDose}</p>
+      <p>{ valueFromBlockchain.weightDose }</p>
       <p>{ t(`${valueFromBlockchain.presentation}.0`) }</p>
       <p>{ t(`${valueFromBlockchain.presentation}.1`) }</p>
       <p>{ t(`${valueFromBlockchain.treatmentTime}.0`) }</p>
       <p>{ t(valueFromBlockchain.frequency) }</p>
       <p>{ t(valueFromBlockchain.warning) }</p>
       <p>{ t(valueFromBlockchain.note) }</p>
-      <p>{handleWeightDose(valueFromBlockchain.weightDose)}</p>
     </main>
   );
 }
