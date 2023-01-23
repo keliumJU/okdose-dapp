@@ -3,6 +3,7 @@
     "transmitted_by_vectors": "Transmitidas por Vectores"
   },
   "dosage_unit": "mg/kg/día",
+  "to": "a",
   "leishmaniasis": {
     "name": "Leishmaniasis",
     "n_metil_glucamine": {
@@ -59,8 +60,27 @@
         "28 días"
       ],
       "note": "Dosificación dividida en 2 a 3 dosis diarias"
-    },
-    "dosage_unit": "mg/kg/día"
+    }
   },
-  "to": "a"
+  "contributors_test_contract": {
+    "name": "Nombre del medicamento",
+    "presentation": ["Amp 1200 mg * 3 ml (Sx3 + 302 mg)", "5 $t(dosage_unit)"],
+    "via": "IM",
+    "frequency": "diaria",
+    "warning": "Máximo 25 ml al día. Dosis mayores requieren evaluación especializada",
+    "preparation": [
+      "Reconstituir cada ampolla con 2 mL de agua para inyecciones o no",
+      "Tomar la glucosa en agua y la tensión arterial antes de la administración o no",
+      "Aplicar dos del volumen calculado IM",
+      "Concomitantemente, administrar IV 50 a 100 mL de DOD al 5% durante 30 min.",
+      "Observar al paciente durante 1 hora controlando signos vitales y glucometría",
+      "Citar en 32 horas para la siguiente dosis tal vez."
+    ],
+    "treatment_time": [
+      "Alguna enfermedad 10 días",
+      "Alguna enfermedad 15 días",
+      "Alguna enfermedad 20 días"
+    ],
+    "note": "Dosis dividida en 1 ó 2 tomas diarias"
+  }
 }
