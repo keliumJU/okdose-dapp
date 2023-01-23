@@ -6,6 +6,8 @@
   "to": "a",
   "leishmaniasis": {
     "name": "Leishmaniasis",
+    "cutaneous_mococutaneous": "Leishmaniasis cutánea y mucocutánea",
+    "visceral": "Leishmaniasis visceral",
     "n_metil_glucamine": {
       "name": "N-Metil Glucamina",
       "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
@@ -60,6 +62,30 @@
         "28 días"
       ],
       "note": "Dosificación dividida en 2 a 3 dosis diarias"
+    },
+    "amphotericin_b_liposomal": {
+      "name": "Anfotericina B Liposomal",
+      "presentation": ["AmBisome® - Frasco Ampolla x 50 mg", "{{dose}} $t(dosage_unit)", "paciente inmunocompetente", "paciente inmunocomprometido"],
+      "dosage_prescription": "{{volumeDose}} al día, infusión durante 2 horas ({{weightDose}})",
+      "warning": "No superar 250 mg al día",
+      "treatment_time": {
+        "lv_3mg": "Días 1 a 5 y luego en días 14 y 21",
+        "lv_4mg": "Días 1 a 5 y luego en días 10, 17, 24, 31 y 38",
+        "lcm_2mg": "De 10 a 20 días",
+        "lcm_3mg": "De 7 a 13 días"
+      },
+      "preparation": [
+        "Reconstituir con 12 mL de agua estéril para inyectables cada ampolla de AmBisome®",
+        "Inmediatamente después de añadir el agua, agitar el vial de forma vigorosa durante 30 segundos para que AmBisome® se disperse por completo.",
+        "Inspeccionar visualmente el vial para confirmar que no contenga material particulado y seguir agitándolo hasta obtener una dispersión completa.",
+        "No utilizar si se observa alguna precipitación de material extraña.",
+        "Estimar el número de ampollas para alcanzar {{V1}}.",
+        "Con una jeringa estéril, aspirar {{V1}} de la(s) ampolla(s) reconstituida(s).",
+        "Utilizando el filtro de 5 µm proporcionado, instilar el preparado de AmBisome® en un recipiente estéril con {{V2}} de DAD 5%.",
+        "Administrar el volumen total {{volumeDose}} en infusión x 1 hora.",
+        "Usar equipo de infusión fotoprotector",
+        "Para la perfusión intravenosa de AmBisome®, se puede utilizar un filtro de membrana en la vía de infusión. Sin embargo, el diámetro medio de los poros del filtro no debe ser menor de 1,0 µm."
+      ]
     }
   },
   "contributors_test_contract": {

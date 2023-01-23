@@ -14,9 +14,14 @@ const prescribeMiltefosine = async (nearInterface, weight) => (
   nearInterface.viewMethod(process.env.MILTEFOSINE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
 );
 
+const prescribeAmphotericinBLiposomal = async (nearInterface, weight, prescriptionType) => (
+  nearInterface.viewMethod(process.env.AMPHOTERICINBLIPOSOMAL_CONTRACT, process.env.CONTRACT_METHOD, { weight, prescriptionType })
+);
+
 export {
   prescribeNMetilGlucamine,
   prescribeSodiumStibogluconate,
   prescribePentamidineIsethionate,
-  prescribeMiltefosine
+  prescribeMiltefosine,
+  prescribeAmphotericinBLiposomal
 };
