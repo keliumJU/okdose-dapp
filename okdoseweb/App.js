@@ -27,7 +27,7 @@ export default function App({ wallet }) {
       <input name="weight" onChange={handleWeight} placeholder="weight" />
       <br />
       <hr />
-      <p>{ t('leishmaniasis.name') }</p>
+      <p className="text-3xl underline text-customColor">{ t('leishmaniasis.name') }</p>
       <p>{ t(valueFromBlockchain.name) }</p>
       <p>{ valueFromBlockchain.weightDose }</p>
       <p>{ t(`${valueFromBlockchain.presentation}.0`) }</p>
