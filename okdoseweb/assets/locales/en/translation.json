@@ -48,6 +48,19 @@
         "Observe the patient for 1 hour controlling vital signs and glucometry.",
         "Cite in 48 hours for the next dose."
       ]
-    }
-  }
+    },
+    "miltefosine": {
+      "name": "Miltefosine",
+      "presentation": ["Impavido® - pill 10 mg and 50 mg", "(1.5 to 2.5 $t(dosage_unit))"],
+      "frequency": "every day",
+      "warning_under_10_kg": "Do not deliver to patients with weight less than 10kg",
+      "warning_under_150_mg": "Do not exceed 150 mg per day",
+      "treatment_time": [
+        "28 days"
+      ],
+      "note": "Dosage divided into 2 to 3 daily doses"
+    },
+    "dosage_unit": "mg/kg/día"
+  },
+  "to": "to"
 }

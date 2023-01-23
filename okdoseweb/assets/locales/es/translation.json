@@ -48,6 +48,19 @@
         "Observar durante 1 hora al paciente controlando signos vitales y glucometría.",
         "Citar en 48 horas para la siguiente dosis."
       ]
-    }
-  }
+    },
+    "miltefosine": {
+      "name": "Miltefosina",
+      "presentation": ["Impavido® - cápsula 10 mg y 50 mg", "(1.5 a 2.5 $t(dosage_unit))"],
+      "frequency": "cada día",
+      "warning_under_10_kg": "No administrar a pacientes con menos de 10kg",
+      "warning_under_150_mg": "No se deben superar 150 mg al día",
+      "treatment_time": [
+        "28 días"
+      ],
+      "note": "Dosificación dividida en 2 a 3 dosis diarias"
+    },
+    "dosage_unit": "mg/kg/día"
+  },
+  "to": "a"
 }
