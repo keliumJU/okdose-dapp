@@ -6,6 +6,8 @@
   "to": "à",
   "leishmaniasis": {
     "name": "Leishmaniose",
+    "cutaneous_mococutaneous": "Leishmaniose cutanée et cutanéo-muqueuse",
+    "visceral": "Leishmaniose Viscérale",
     "n_metil_glucamine": {
       "name": "Antimoniate de méglumine",
       "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
@@ -52,7 +54,7 @@
     },
     "miltefosine": {
       "name": "Miltefosine",
-      "presentation": ["Impavido® - gélule 10 mg et 50 mg", "(1.5 à 2.5 $t(dosage_unit))"],
+      "presentation": ["Gélule 10 mg et 50 mg", "(1.5 à 2.5 $t(dosage_unit))"],
       "frequency": "chaque jour",
       "warning_under_10_kg": "Ne pas administrer aux patients pesant moins de 10 kg",
       "warning_under_150_mg": "Ne pas dépasser 150 mg par jour",
@@ -60,6 +62,30 @@
         "28 jours"
       ],
       "note": "Posologie divisée en 2 à 3 doses quotidiennes"
+    },
+    "amphotericin_b_liposomal": {
+      "name": "Amphotéricine B liposomale",
+      "presentation": ["Amphotericin B Liposomal - Bouteille-ampoule x 50 mg", "{{dose}} $t(dosage_unit)", "patient immunocompétent", "patient immunodéprimé"],
+      "dosage_prescription": "{{volumeDose}} à jour, Infusion pendant 2 heures ({{weightDose}})",
+      "warning": "Ne pas dépasser 250 mg par jour",
+      "treatment_time": {
+        "lv_3mg": "Jours 1 à 5 puis les jours 14 et 21",
+        "lv_4mg": "Jours 1 à 5 puis les jours 10, 17, 24, 31 et 38",
+        "lcm_2mg": "10 à 20 jours",
+        "lcm_3mg": "7 à 13 jours"
+      },
+      "preparation": [
+        "Reconstituer chaque flacon d'Amphotericin B Liposomal avec 12 ml d'eau stérile pour préparations injectables.",
+        "Immédiatement après l'ajout de l'eau, agitez vigoureusement le flacon pendant 30 secondes afin de disperser complètement Amphotericin B Liposomal.",
+        "Inspectez visuellement le flacon pour vous assurer qu'il ne contient pas de particules et continuez de remuer jusqu'à l'obtention d'une dispersion complète.",
+        "Ne pas utiliser si une précipitation de matière étrangère est observée.",
+        "Estimer le nombre d'ampoules pour atteindre {{V1}}.",
+        "Avec une seringue stérile, aspirer {{V1}} des ampoules reconstituées.",
+        "À l'aide du filtre de 5 µm fourni, instillez la préparation d'Amphotericin B Liposomal dans un récipient stérile avec {{V2}} de DAD à 5%.",
+        "Administrer le volume total {{volumeDose}} en perfusion x 1 heure.",
+        "Utiliser du matériel de perfusion photoprotecteur",
+        "Pour la perfusion intraveineuse d'Amphotericin B Liposomal, un filtre à membrane peut être utilisé dans la ligne de perfusion. Toutefois, le diamètre moyen des pores du filtre ne doit pas être inférieur à 1,0 µm."
+      ]
     }
   },
   "contributors_test_contract": {
