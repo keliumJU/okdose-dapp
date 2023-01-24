@@ -54,7 +54,7 @@
     },
     "miltefosine": {
       "name": "Miltefosine",
-      "presentation": ["Impavido® - pill 10 mg and 50 mg", "(1.5 to 2.5 $t(dosage_unit))"],
+      "presentation": ["Pill 10 mg and 50 mg", "(1.5 to 2.5 $t(dosage_unit))"],
       "frequency": "every day",
       "warning_under_10_kg": "Do not deliver to patients with weight less than 10kg",
       "warning_under_150_mg": "Do not exceed 150 mg per day",
@@ -65,7 +65,7 @@
     },
     "amphotericin_b_liposomal": {
       "name": "Amphotericin B Liposomal",
-      "presentation": ["AmBisome® - Blister vial x 50 mg", "{{dose}} $t(dosage_unit)", "immunocompetent patient", "immunocompromised patient"],
+      "presentation": ["Amphotericin B Liposomal - Blister vial x 50 mg", "{{dose}} $t(dosage_unit)", "immunocompetent patient", "immunocompromised patient"],
       "dosage_prescription": "{{volumeDose}} a day, infusion during 2 hours ({{weightDose}})",
       "warning": "Do not exceed 250 mg per day",
       "treatment_time": {

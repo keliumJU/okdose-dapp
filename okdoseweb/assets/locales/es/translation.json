@@ -54,7 +54,7 @@
     },
     "miltefosine": {
       "name": "Miltefosina",
-      "presentation": ["Impavido® - cápsula 10 mg y 50 mg", "(1.5 a 2.5 $t(dosage_unit))"],
+      "presentation": ["Cápsula 10 mg y 50 mg", "(1.5 a 2.5 $t(dosage_unit))"],
       "frequency": "cada día",
       "warning_under_10_kg": "No administrar a pacientes con menos de 10kg",
       "warning_under_150_mg": "No se deben superar 150 mg al día",
@@ -65,7 +65,7 @@
     },
     "amphotericin_b_liposomal": {
       "name": "Anfotericina B Liposomal",
-      "presentation": ["AmBisome® - Frasco Ampolla x 50 mg", "{{dose}} $t(dosage_unit)", "paciente inmunocompetente", "paciente inmunocomprometido"],
+      "presentation": ["Anfotericina B liposomal - Frasco Ampolla x 50 mg", "{{dose}} $t(dosage_unit)", "paciente inmunocompetente", "paciente inmunocomprometido"],
       "dosage_prescription": "{{volumeDose}} al día, infusión durante 2 horas ({{weightDose}})",
       "warning": "No superar 250 mg al día",
       "treatment_time": {
