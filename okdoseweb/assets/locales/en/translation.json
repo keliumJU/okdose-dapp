@@ -75,16 +75,16 @@
         "lcm_3mg": "7 to 13 days"
       },
       "preparation": [
-        "Reconstitute each ampoule of AmBisome® with 12 mL of sterile water for injections",
-        "Immediately after adding the water, shake the vial vigorously for 30 seconds so that AmBisome® disperses completely.",
+        "Reconstitute each ampoule of Amphotericin B Liposomal with 12 mL of sterile water for injections",
+        "Immediately after adding the water, shake the vial vigorously for 30 seconds so that Amphotericin B Liposomal disperses completely.",
         "Visually inspect the vial to confirm that it does not contain particulate material and continue stirring until a complete dispersion is obtained.",
         "Do not use if there is any precipitation of foreign material.",
         "Estimate the number of ampoules to reach {{V1}}.",
         "With a sterile syringe, aspirate {{V1}} of the reconstituted ampoule(s).",
-        "Using the 5 μm filter provided, instill the AmBisome® preparation in a sterile container with {{V2}} of DAD 5%.",
+        "Using the 5 μm filter provided, instill the Amphotericin B Liposomal preparation in a sterile container with {{V2}} of DAD 5%.",
         "Manage the total volume {{volumeDose}} in infusion x 1 hour.",
         "Use photoprotective infusion equipment",
-        "For the intravenous infusion of AmBisome®, a membrane filter can be used in the infusion line. However, the average diameter of the filter pores should not be less than 1.0 μm."
+        "For the intravenous infusion of Amphotericin B Liposomal, a membrane filter can be used in the infusion line. However, the average diameter of the filter pores should not be less than 1.0 μm."
       ]
     }
   },

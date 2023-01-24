@@ -75,16 +75,16 @@
         "lcm_3mg": "De 7 a 13 días"
       },
       "preparation": [
-        "Reconstituir con 12 mL de agua estéril para inyectables cada ampolla de AmBisome®",
-        "Inmediatamente después de añadir el agua, agitar el vial de forma vigorosa durante 30 segundos para que AmBisome® se disperse por completo.",
+        "Reconstituir con 12 mL de agua estéril para inyectables cada ampolla de Anfotericina B liposomal",
+        "Inmediatamente después de añadir el agua, agitar el vial de forma vigorosa durante 30 segundos para que Anfotericina B liposomal se disperse por completo.",
         "Inspeccionar visualmente el vial para confirmar que no contenga material particulado y seguir agitándolo hasta obtener una dispersión completa.",
         "No utilizar si se observa alguna precipitación de material extraña.",
         "Estimar el número de ampollas para alcanzar {{V1}}.",
         "Con una jeringa estéril, aspirar {{V1}} de la(s) ampolla(s) reconstituida(s).",
-        "Utilizando el filtro de 5 µm proporcionado, instilar el preparado de AmBisome® en un recipiente estéril con {{V2}} de DAD 5%.",
+        "Utilizando el filtro de 5 µm proporcionado, instilar el preparado de Anfotericina B liposomal en un recipiente estéril con {{V2}} de DAD 5%.",
         "Administrar el volumen total {{volumeDose}} en infusión x 1 hora.",
         "Usar equipo de infusión fotoprotector",
-        "Para la perfusión intravenosa de AmBisome®, se puede utilizar un filtro de membrana en la vía de infusión. Sin embargo, el diámetro medio de los poros del filtro no debe ser menor de 1,0 µm."
+        "Para la perfusión intravenosa de Anfotericina B liposomal, se puede utilizar un filtro de membrana en la vía de infusión. Sin embargo, el diámetro medio de los poros del filtro no debe ser menor de 1,0 µm."
       ]
     }
   },

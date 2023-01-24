@@ -75,16 +75,16 @@
         "lcm_3mg": "7 à 13 jours"
       },
       "preparation": [
-        "Reconstituer chaque flacon d'AmBisome® avec 12 ml d'eau stérile pour préparations injectables.",
-        "Immédiatement après l'ajout de l'eau, agitez vigoureusement le flacon pendant 30 secondes afin de disperser complètement AmBisome®.",
+        "Reconstituer chaque flacon d'Amphotericin B Liposomal avec 12 ml d'eau stérile pour préparations injectables.",
+        "Immédiatement après l'ajout de l'eau, agitez vigoureusement le flacon pendant 30 secondes afin de disperser complètement Amphotericin B Liposomal.",
         "Inspectez visuellement le flacon pour vous assurer qu'il ne contient pas de particules et continuez de remuer jusqu'à l'obtention d'une dispersion complète.",
         "Ne pas utiliser si une précipitation de matière étrangère est observée.",
         "Estimer le nombre d'ampoules pour atteindre {{V1}}.",
         "Avec une seringue stérile, aspirer {{V1}} des ampoules reconstituées.",
-        "À l'aide du filtre de 5 µm fourni, instillez la préparation d'AmBisome® dans un récipient stérile avec {{V2}} de DAD à 5%.",
+        "À l'aide du filtre de 5 µm fourni, instillez la préparation d'Amphotericin B Liposomal dans un récipient stérile avec {{V2}} de DAD à 5%.",
         "Administrer le volume total {{volumeDose}} en perfusion x 1 heure.",
         "Utiliser du matériel de perfusion photoprotecteur",
-        "Pour la perfusion intraveineuse d'AmBisome®, un filtre à membrane peut être utilisé dans la ligne de perfusion. Toutefois, le diamètre moyen des pores du filtre ne doit pas être inférieur à 1,0 µm."
+        "Pour la perfusion intraveineuse d'Amphotericin B Liposomal, un filtre à membrane peut être utilisé dans la ligne de perfusion. Toutefois, le diamètre moyen des pores du filtre ne doit pas être inférieur à 1,0 µm."
       ]
     }
   },
