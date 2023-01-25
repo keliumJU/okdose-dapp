@@ -16,7 +16,7 @@ class NearInterface {
    * @param  {String} contractId [Name of the subaccount in the testnet or mainet network]
    * @param  {String} method     [Name of the method exposing the view function in the contract]
    * @param  {Object} args       [Arguments received by the view function in the smart contract]
-   * @return {Function}          [Function accessing the view method of the smart contract]
+   * @return {Prescription}      [Object that has the translation keys and the prescribed dosage]
    */
   async viewMethod(contractId, method, args = {}) {
     return await this.wallet.viewMethod({ contractId: contractId, method: method, args: args});
