@@ -41,7 +41,9 @@ const prescribeMiltefosine = async (nearInterface, weight) => (
  * Gets the translation keys and dosage of the smart contract Amphotericin B Liposomalr.
  * @param {NearInterface} nearInterface Class that allows the connection to a near wallet.
  * @param {number} weight Patient's weight in kg to one decimal point
- * @param {string} prescriptionType Type of prescription based on disease can be any of the following: LCM2, LCM3, LV3, LV4, where L = Leishmaniasis, C = Cutaneous, M = Mucocutaneous, V = Visceral and 2, 3, 4 are the concentration in mg/kg/day.
+ * @param {string} prescriptionType Type of prescription based on disease can be any of the following:
+ * LCM2, LCM3, LV3, LV4, where L = Leishmaniasis, C = Cutaneous, M = Mucocutaneous, V = Visceral
+ * and 2, 3, 4 are the concentration in mg/kg/day.
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
 const prescribeAmphotericinBLiposomal = async (nearInterface, weight, prescriptionType) => (

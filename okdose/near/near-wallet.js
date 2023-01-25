@@ -1,3 +1,6 @@
+// This file was generated automatically when creating the near app
+// follow this guide for more information: https://docs.near.org/develop/quickstart-guide
+
 // near api js
 import { providers } from 'near-api-js';
 
