@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { NearInterface } from '@near-interface';
+import  NearInterface  from '@near-interface';
 import { prescribeMiltefosine } from '@leishmaniasis';
 
 export default function App({ wallet }) {
