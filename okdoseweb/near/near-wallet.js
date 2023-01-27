@@ -5,10 +5,6 @@
 import { providers } from 'near-api-js';
 
 // wallet selector UI
-import '@near-wallet-selector/modal-ui/styles.css';
-import { setupModal } from '@near-wallet-selector/modal-ui';
-import LedgerIconUrl from '@near-wallet-selector/ledger/assets/ledger-icon.png';
-import MyNearIconUrl from '@near-wallet-selector/my-near-wallet/assets/my-near-wallet-icon.png';
 
 // wallet selector options
 import { setupWalletSelector } from '@near-wallet-selector/core';
@@ -38,8 +34,8 @@ export class Wallet {
   async startUp() {
     this.walletSelector = await setupWalletSelector({
       network: this.network,
-      modules: [setupMyNearWallet({ iconUrl: MyNearIconUrl }),
-      setupLedger({ iconUrl: LedgerIconUrl })],
+      modules: [setupMyNearWallet({}),
+      setupLedger({})],
     });
 
     const isSignedIn = this.walletSelector.isSignedIn();
@@ -50,20 +46,6 @@ export class Wallet {
     }
 
     return isSignedIn;
-  }
-
-  // Sign-in method
-  signIn() {
-    const description = 'Please select a wallet to sign in.';
-    const modal = setupModal(this.walletSelector, { contractId: this.createAccessKeyFor, description });
-    modal.show();
-  }
-
-  // Sign-out method
-  signOut() {
-    this.wallet.signOut();
-    this.wallet = this.accountId = this.createAccessKeyFor = null;
-    window.location.replace(window.location.origin + window.location.pathname);
   }
 
   // Make a read-only call to retrieve information from the network
