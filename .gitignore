@@ -36,4 +36,4 @@ yarn-error.log*
 
 /**/.eslintcache
 
-contracts.env
+.env

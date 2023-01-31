@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "env-cmd -f ../contracts.env parcel index.html --open",
+    "start": "env-cmd -f ../.env parcel index.html --open",
     "build": "parcel build index.html --public-url ./"
   },
   "devDependencies": {
@@ -13,6 +13,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "babel-plugin-module-resolver": "^5.0.0",
+    "buffer": "^5.5.0",
     "env-cmd": "^10.1.0",
     "eslint": "^8.28.0",
     "eslint-import-resolver-babel-module": "^5.0.0",
