@@ -31,7 +31,7 @@
     "verbose": true,
     "testEnvironment": "jsdom",
     "testMatch": [
-        "<rootDir>/tests/*.test.js"
+        "<rootDir>/transmissionTypes/transmittedByVectors/*.test.js"
     ]
   }
 }

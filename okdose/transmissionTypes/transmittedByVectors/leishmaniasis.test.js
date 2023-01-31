@@ -1,10 +1,9 @@
-import * as Leishmaniasis from "../transmissionTypes/transmittedByVectors/leishmaniasis";
-import NearInterface from '../../okdoseweb/near/near-interface'
-import { Wallet } from '../../okdoseweb/near/near-wallet'
+import * as Leishmaniasis from "./leishmaniasis";
+import NearInterface from '../../../okdoseweb/near/near-interface'
+import { Wallet } from '../../../okdoseweb/near/near-wallet'
 import * as dotenv from 'dotenv';
 import { join } from 'path';
-dotenv.config({path: join(__dirname, '../../', '.env')})
-
+dotenv.config({path: join(__dirname, '../../../', '.env')})
 
 describe('Leishmaniasis smart contract prescription response check', () => {
   const wallet = new Wallet({ createAccessKeyFor: process.env.MAIN_ACCOUNT });
