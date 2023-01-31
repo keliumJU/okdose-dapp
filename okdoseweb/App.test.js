@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv';
 import { join } from 'path';
 import App from './App';
 import { prescribeMiltefosine } from '../okdose/transmissionTypes/transmittedByVectors/leishmaniasis';
-import { NearInterface } from './near/near-interface';
+import NearInterface from './near/near-interface';
 import { Wallet } from './near/near-wallet'
 import i18n from './i18n/i18n';
 

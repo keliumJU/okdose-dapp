@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import './i18n/i18n';
 import { Wallet } from './near/near-wallet';
-import { NearInterface } from './near/near-interface';
+import NearInterface from './near/near-interface';
 import { prescribeMiltefosine } from '../okdose/transmissionTypes/transmittedByVectors/leishmaniasis';
 
 import App from './App';
