@@ -1,45 +1,22 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
-import  NearInterface  from '@near-interface';
-import { prescribeMiltefosine } from '@leishmaniasis';
+import { useTranslation } from 'react-i18next'
 
-export default function App({ wallet }) {
+export default function App({ prescription }) {
   const { t } = useTranslation();
-  const nearInterface = new NearInterface({ walletToUse: wallet });
-  const [valueFromBlockchain, setValueFromBlockchain] = React.useState({});
-  const weight = 50;
-
-  React.useEffect(() => {
-    prescribeMiltefosine(nearInterface, weight)
-      .then(setValueFromBlockchain)
-      .catch(alert);
-  }, []);
-
-  const handleWeight = (event) => {
-    prescribeMiltefosine(nearInterface, parseFloat(event.target.value))
-      .then(setValueFromBlockchain)
-      .catch(alert);
-  };
 
   return (
     <main>
-      <input name="weight" onChange={handleWeight} placeholder="weight" />
-      <br />
-      <hr />
-      <p className="text-3xl underline text-customColor">{ t('leishmaniasis.name') }</p>
-      <p>{ t(valueFromBlockchain.name) }</p>
-      <p>{ valueFromBlockchain.weightDose }</p>
-      <p>{ t(`${valueFromBlockchain.presentation}.0`) }</p>
-      <p>{ t(`${valueFromBlockchain.presentation}.1`) }</p>
-      <p>{ t(`${valueFromBlockchain.treatmentTime}.0`) }</p>
-      <p>{ t(valueFromBlockchain.frequency) }</p>
-      <p>{ t(valueFromBlockchain.warning) }</p>
-      <p>{ t(valueFromBlockchain.note) }</p>
+      <div>
+        <h1 className="text-3xl underline text-customColor">{ t(`${prescription.name}`) }</h1>
+        <p data-testid="presentation">{ t(`${prescription.presentation}.0`) }</p>
+        <p>{ t(`${prescription.presentation}.1`) }</p>
+        <p>{ t(`${prescription.treatmentTime}.0`) }</p>
+        <p>{ t(`${prescription.warning}`) }</p>
+        <p>{ t(`${prescription.note}`) }</p>
+        <p>{ prescription.weightDose }</p>
+        <p>{ prescription.volumeDose }</p>
+      </div>
     </main>
   );
 }
 
-App.propTypes = {
-  wallet: PropTypes.shape().isRequired,
-};

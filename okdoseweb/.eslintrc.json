@@ -10,7 +10,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es2022": true
+    "es2022": true,
+    "jest/globals": true
   },
   "extends": [
     "eslint:recommended",
@@ -20,7 +21,7 @@
     "sourceType": "module",
     "ecmaFeatures": { "jsx": true }
   },
-  "plugins": ["module-resolver", "import", "react-hooks", "jsx-a11y"],
+  "plugins": ["module-resolver", "import", "react-hooks", "jsx-a11y", "jest"],
   "rules": {
     "camelcase": ["error"],
     "quotes": ["error", "single"],
@@ -30,10 +31,9 @@
     "react/no-unescaped-entities": ["error"],
     "react/jsx-filename-extension": ["off"],
     "react/jsx-uses-vars": "error",
-    "react/prop-types": ["warn"],
     "import/no-relative-packages": ["off"],
-    "module-resolver/use-alias": ["warn"],
-    "import/no-unresolved": ["error"]
-
+    "import/no-unresolved": ["error"],
+    "module-resolver/use-alias": ["off"],
+    "react/prop-types": ["off"]
   }
 }
