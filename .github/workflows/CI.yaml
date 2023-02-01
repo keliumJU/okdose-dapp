@@ -12,12 +12,13 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: 'create env file'
-        env: # Or as an environment variable
-          contracts_env: ${{ secrets.ENV_FILE }}
-        run: echo "$contracts_env" > .env
-
-      - name: 'show env file'
-        run: cat .env
+        run: |
+          touch .env
+          echo MAIN_ACCOUNT="${{ secrets.MAINACCOUNT }}" >> .env
+          echo CONTRACT_METHOD=${{ secrets.CONTRACT_METHOD }} >> .env
+          echo NMETIL_CONTRACT=${{ secrets.NMETIL_CONTRACT }} >> .env
+          echo NMETIL_BLOCK_ID=${{ secrets.NMETIL_BLOCK_ID }} >> .env
+          cat .env
 
       - uses: actions/setup-node@v3
         with:
