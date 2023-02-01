@@ -23,11 +23,12 @@ jobs:
           echo $MAIN_ACCOUNT
           echo $CONTRACT_METHOD
           touch .env
-          echo MAIN_ACCOUNT="${{ secrets.MAINACCOUNT }}" >> .env
-          echo CONTRACT_METHOD=${{ secrets.CONTRACT_METHOD }} >> .env
-          echo NMETIL_CONTRACT=${{ secrets.NMETIL_CONTRACT }} >> .env
-          echo NMETIL_BLOCK_ID=${{ secrets.NMETIL_BLOCK_ID }} >> .env
+          echo MAIN_ACCOUNT='${{ secrets.MAINACCOUNT }}' >> .env
+          echo CONTRACT_METHOD='${{ secrets.CONTRACT_METHOD }}' >> .env
+          echo NMETIL_CONTRACT='${{ secrets.NMETIL_CONTRACT }}' >> .env
+          echo NMETIL_BLOCK_ID='${{ secrets.NMETIL_BLOCK_ID }}' >> .env
           cat .env
+          ls
 
       - name: "Install the project"
         run: yarn
