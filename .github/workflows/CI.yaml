@@ -8,13 +8,10 @@ jobs:
   build-tests:
     name: Run tests
     runs-on: ubuntu-latest
-    environment: Development
     steps:
       - uses: actions/checkout@v3
 
       - name: 'create env file'
-        with: # Set credentials secret as an input
-          credentials: ${{ secrets.ENV_FILE }}
         env: # Or as an environment variable
           contracts_env: ${{ secrets.ENV_FILE }}
         run: echo "$contracts_env" > .env
