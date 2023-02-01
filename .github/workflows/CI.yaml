@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: 'create env file'
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: 'show env file'
+        run: cat .env
+
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
