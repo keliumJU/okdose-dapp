@@ -10,19 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
 
       - name: 'create env file'
+        env: 
+          MAIN_ACCOUNT: ${{ secrets.MAINACCOUNT }}
+          CONTRACT_METHOD : ${{ secrets.CONTRACT_METHOD }}
         run: |
+          ls
+          echo $MAIN_ACCOUNT
+          echo $CONTRACT_METHOD
           touch .env
           echo MAIN_ACCOUNT="${{ secrets.MAINACCOUNT }}" >> .env
           echo CONTRACT_METHOD=${{ secrets.CONTRACT_METHOD }} >> .env
           echo NMETIL_CONTRACT=${{ secrets.NMETIL_CONTRACT }} >> .env
           echo NMETIL_BLOCK_ID=${{ secrets.NMETIL_BLOCK_ID }} >> .env
           cat .env
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16"
 
       - name: "Install the project"
         run: yarn
