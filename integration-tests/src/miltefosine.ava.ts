@@ -8,7 +8,6 @@ const contractAccount = process.env.MILTEFOSINE_CONTRACT as string;
 const blockId = process.env.MILTEFOSINE_BLOCK_ID as string;
 const contractMethod = process.env.CONTRACT_METHOD as string;
 
-
 initContract(contractAccount, blockId)
 
 test('It returns the correct type attributes', async (t) => {
