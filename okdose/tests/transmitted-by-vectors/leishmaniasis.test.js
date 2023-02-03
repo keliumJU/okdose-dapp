@@ -15,7 +15,7 @@ describe('Leishmaniasis smart contract prescription response check', () => {
     nearInterface = new NearInterface({ walletToUse: wallet });
   });
 
-  test('It returns the correct keys translations for N-Metil Glucamine', async () => {
+  test('It returns the correct properties for N-Metil Glucamine', async () => {
     const dose = await Leishmaniasis.prescribeNMetilGlucamine(nearInterface, weight)
 
     expect(typeof Leishmaniasis.prescribeNMetilGlucamine).toBe("function");
@@ -29,7 +29,7 @@ describe('Leishmaniasis smart contract prescription response check', () => {
     expect(dose.warning).toBeDefined();
   });
 
-  test('It returns the correct keys translations for Sodium stibogluconato', async () => {
+  test('It returns the correct properties for Sodium stibogluconato', async () => {
     const dose = await Leishmaniasis.prescribeSodiumStibogluconate(nearInterface, weight)
 
     expect(typeof Leishmaniasis.prescribeSodiumStibogluconate).toBe("function");
@@ -43,7 +43,7 @@ describe('Leishmaniasis smart contract prescription response check', () => {
     expect(dose.warning).toBeDefined();
   });
 
-  test('It returns the correct keys translations for Pentamidine isethionate', async () => {
+  test('It returns the correct properties for Pentamidine isethionate', async () => {
     const dose = await Leishmaniasis.prescribePentamidineIsethionate(nearInterface, weight)
 
     expect(typeof Leishmaniasis.prescribePentamidineIsethionate).toBe("function");
@@ -58,7 +58,7 @@ describe('Leishmaniasis smart contract prescription response check', () => {
     expect(dose.preparation).toBeDefined();
   });
 
-  test('It returns the correct keys translations for Miltefosine', async () => {
+  test('It returns the correct properties for Miltefosine', async () => {
     const dose = await Leishmaniasis.prescribeMiltefosine(nearInterface, weight)
 
     expect(typeof Leishmaniasis.prescribeMiltefosine).toBe("function");
@@ -71,7 +71,7 @@ describe('Leishmaniasis smart contract prescription response check', () => {
     expect(dose.note).toBeDefined();
   });
 
-  test('It returns the correct keys translations for Amphotericin B Liposomal', async () => {
+  test('It returns the correct properties for Amphotericin B Liposomal', async () => {
     const dose = await Leishmaniasis.prescribeAmphotericinBLiposomal(nearInterface, weight, "LCM2")
 
     expect(typeof Leishmaniasis.prescribeAmphotericinBLiposomal).toBe("function");
