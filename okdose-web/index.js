@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import './i18n/i18n';
-import { Wallet } from './near/near-wallet';
-import NearInterface from './near/near-interface';
-import { prescribeMiltefosine } from '../okdose/transmissionTypes/transmittedByVectors/leishmaniasis';
+import { Wallet } from './near/nearWallet';
+import NearInterface from './near/nearInterface';
+import { prescribeMiltefosine } from '../okdose/transmission-types/transmitted-by-vectors/leishmaniasis';
 
 import App from './App';
 

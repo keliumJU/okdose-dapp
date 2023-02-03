@@ -1,6 +1,6 @@
-import * as Leishmaniasis from "../../transmissionTypes/transmittedByVectors/leishmaniasis";
-import NearInterface from '../../../okdoseweb/near/near-interface'
-import { Wallet } from '../../../okdoseweb/near/near-wallet'
+import * as Leishmaniasis from "../../transmission-types/transmitted-by-vectors/leishmaniasis";
+import NearInterface from '../../../okdose-web/near/nearInterface'
+import { Wallet } from '../../../okdose-web/near/nearWallet'
 import * as dotenv from 'dotenv';
 import { join } from 'path';
 dotenv.config({path: join(__dirname, '../../../', '.env')})

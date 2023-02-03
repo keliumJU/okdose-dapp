@@ -1,4 +1,4 @@
 node_modules
 dist
 .eslintrc.json
-near-wallet.js
+nearWallet.js

@@ -1,28 +1,48 @@
-# OKDOSE-dApp
+<div align="center">
+  <h1>OKDOSE</h1>
+</div>
+<br>
 
-[OKDOSE](https://okdose.co/) is a PWA (progressive web application) for world health. This application helps to calculate the necessary dose for the treatment of tropical diseases, this information is relevant to doctors, especially those working in remote areas without internet access.
+OKDOSE is a decentralized application that supports the calculation of medication dosages and treatment time for tropical diseases such as Leishmaniasis, Malaria, Chagas, Rabies, Tuberculosis and Leprosy. All the dosages are calculated based on formulas validated by medical specialists and criteria of the World Health Organization.
 
-OKDOSE-dApp is a project in which OKDOSE will be reformulated to become a decentralized application (dApp) that will be hosted on the [NEAR blockchain](https://near.org/).
+## Why OKDOSE is decentralized?
 
-## Prerequisites
+In OKDOSE, drug formulations must be protected so that third parties cannot alter them and put patients' health at risk. The development in web3.0 with a cutting-edge technology such as blockchains, would allow to have a decentralized application with smart-contracts that can be modified only by its creators. This is why the medicines' formulations are hosted on the [NEAR](https://near.org/) blockchain to avoid dosages modification.
 
-Install a current version of [Node.js](https://github.com/nodejs/release#release-schedule). NEAR is targeting versions 16+ (version 18 not supported).
+---
 
+## Internationalization
 
-For windows, before executing the next steps to create a NEAR app, you will need to download the Windows Subsystem for Linux [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+For the internationalization of the application, the [i18next](https://www.i18next.com/) library was used. The supported languages are English, Spanish and French.
 
+If the browser is setup in one of the supported languages, the application will be displayed in this language by default. If another language is set, the language displayed will be English.
 
-## Quick Start
+---
+## Installation
 
-Install dependencies with:
+### **Prerequisites**
 
-    yarn install
+Install a current version of Node.js. NEAR is targeting versions 16+ (version 18 not supported).
 
+### **Smart contracts setup**
 
-To start OKDOSE-dApp run:
+To keep private the formulations where the dosages are calculated, the project has two types of contracts. The contracts with the original dosages information, which are in the submodule in a private repository and the contracts for the contributors, which return the same type of response as the original contracts, to ensure the correct functioning of the application when you want to make a contribution.
 
-    yarn start
+In the project root, there is a .env.example file with the accounts where the contracts for contributors are deployed. Make a copy of this file in an .env file before starting the application.
 
+It is important to note that the okdose-dapp-contracts folder will be empty, as it is the private repository of the contracts, but contributors will be able to run the application without any problems.
+
+To set up the repository locally, check the [Contributing](#contributing) section.
+
+---
+
+## Tests
+
+There are integration tests in the project root where the connection with NEAR for all the contracts and the type of responses are tested.
+
+In `okdose-web/tests` there are tests for the components to verify that the front end works as expected.
+
+---
 ## Changelog
 
 Features and bug fixes are listed in the [CHANGELOG][changelog] file.

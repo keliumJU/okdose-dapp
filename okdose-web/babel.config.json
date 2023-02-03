@@ -8,9 +8,9 @@
       "root": ["."],
       "extensions": [".js", ".jsx", ".ts", ".tsx"],
       "alias": {
-        "@near-interface": "../okdose/near/near-interface",
-        "@leishmaniasis": "../okdose/transmissionTypes/transmittedByVectors/leishmaniasis",
-        "@near-wallet": "../okdose/near/near-wallet"
+        "@nearInterface": "../okdose/near/nearInterface",
+        "@leishmaniasis": "../okdose/transmission-types/transmitted-by-vectors/leishmaniasis",
+        "@nearWallet": "../okdose/near/nearWallet"
       }
     }]
   ]

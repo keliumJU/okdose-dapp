@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@leishmaniasis": ["../okdose/transmission-types/transmitted-by-vectors/leishmaniasis"],
+      "@nearInterface": ["../okdose/near/nearInterface"],
+      "@nearWallet": ["../okdose/near/nearWallet"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
+

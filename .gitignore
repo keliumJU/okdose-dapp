@@ -31,8 +31,8 @@ yarn-debug.log*
 yarn-error.log*
 .tool-versions
 
-/okdoseweb/dist
-/okdoseweb/.parcel-cache
+/okdose-web/dist
+/okdose-web/.parcel-cache
 
 /**/.eslintcache
 

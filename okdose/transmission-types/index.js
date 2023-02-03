@@ -1,4 +1,4 @@
-import * as transmittedByVectorsDiseases from "./transmittedByVectors";
+import * as transmittedByVectorsDiseases from "./transmitted-by-vectors";
 
 // Object representing "vector transmission" containing the diseases: leishmaniasis, chagas disease and malaria.
 const transmittedByVectors = {

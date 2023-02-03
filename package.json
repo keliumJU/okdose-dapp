@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "cd okdoseweb && yarn start",
-    "build": "cd okdoseweb && yarn build",
-    "postinstall": "cd okdose && yarn install && cd ../ && cd okdoseweb && yarn install && cd ../ && cd integration-tests && yarn install",
-    "lint": "cd okdose && yarn eslint --cache . && cd .. && cd okdoseweb && yarn eslint --cache . && cd .. && cd integration-tests && yarn eslint --cache .",
-    "lint:fix": "cd okdose && yarn eslint --fix . && cd .. && cd okdoseweb && yarn eslint --fix .",
+    "start": "cd okdose-web && yarn start",
+    "build": "cd okdose-web && yarn build",
+    "postinstall": "cd okdose && yarn install && cd ../ && cd okdose-web && yarn install && cd ../ && cd integration-tests && yarn install",
+    "lint": "cd okdose && yarn eslint --cache . && cd .. && cd okdose-web && yarn eslint --cache . && cd .. && cd integration-tests && yarn eslint --cache .",
+    "lint:fix": "cd okdose && yarn eslint --fix . && cd .. && cd okdose-web && yarn eslint --fix .",
     "format": "prettier --write './**/*.{js,jsx,ts,css,json}' --config ./.prettierrc",
-    "test": "cd okdoseweb && yarn test && cd .. && cd okdose && yarn test && cd .. && cd integration-tests && yarn test"
+    "test": "cd okdose-web && yarn test && cd .. && cd okdose && yarn test && cd .. && cd integration-tests && yarn test"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
