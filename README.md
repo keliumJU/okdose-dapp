@@ -57,13 +57,13 @@ For information on how to contribute, please refer to our [CONTRIBUTING][contrib
 
 ## License
 
-This library is licensed under an MIT license. See [LICENSE][license] for details.
+This library is licensed under an Apache 2.0 license. See [LICENSE][license] for details.
 
 ## Acknowledgements
 
 Made with 💙 by [kommitters Open Source](https://kommit.co)
 
-[license]: https://github.com/kommitters/.template/blob/main/LICENSE
-[coc]: https://github.com/kommitters/.template/blob/main/CODE_OF_CONDUCT.md
-[changelog]: https://github.com/kommitters/.template/blob/main/CHANGELOG.md
-[contributing]: https://github.com/kommitters/.template/blob/main/CONTRIBUTING.md
+[license]: https://github.com/kommitters/okdose-dapp/blob/main/LICENSE
+[coc]: https://github.com/kommitters/okdose-dapp/blob/main/CODE_OF_CONDUCT.md
+[changelog]: https://github.com/kommitters/okdose-dapp/blob/main/CHANGELOG.md
+[contributing]: https://github.com/kommitters/okdose-dapp/blob/main/CONTRIBUTING.md
