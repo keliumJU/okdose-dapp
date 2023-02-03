@@ -14,28 +14,9 @@ jobs:
         with:
           node-version: "16"
 
-      - name: 'create env file'
-        env: 
-          MAIN_ACCOUNT: ${{ secrets.MAINACCOUNT }}
-          CONTRACT_METHOD : ${{ secrets.CONTRACT_METHOD }}
+      - name: 'create .env file in base env.example'
         run: |
-          echo $MAIN_ACCOUNT
-          echo $CONTRACT_METHOD
-          touch .env
-          echo MAIN_ACCOUNT='${{ secrets.MAINACCOUNT }}' >> .env
-          echo CONTRACT_METHOD='${{ secrets.CONTRACT_METHOD }}' >> .env
-          echo NMETIL_CONTRACT='${{ secrets.NMETIL_CONTRACT }}' >> .env
-          echo NMETIL_BLOCK_ID='${{ secrets.NMETIL_BLOCK_ID }}' >> .env
-          cat .env
-          ls -a
-
-      - name: 'Create .env file with action'
-        uses: ozaytsev86/create-env-file@v1
-        with:
-          ENV_MAIN_ACCOUNT: ${{ secrets.MAINACCOUNT }}
-          ENV_CONTRACT_METHOD: ${{ secrets.CONTRACT_METHOD }}
-          ENV_NMETIL_CONTRACT: ${{ secrets.NMETIL_CONTRACT }}
-          ENV_NMETIL_BLOCK_ID: ${{ secrets.NMETIL_BLOCK_ID }}
+          cp .env.example .env
 
       - name: "Install the project"
         run: yarn

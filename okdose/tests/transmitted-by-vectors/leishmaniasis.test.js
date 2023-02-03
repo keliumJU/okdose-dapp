@@ -1,4 +1,4 @@
-import * as Leishmaniasis from "./leishmaniasis";
+import * as Leishmaniasis from "../../transmissionTypes/transmittedByVectors/leishmaniasis";
 import NearInterface from '../../../okdoseweb/near/near-interface'
 import { Wallet } from '../../../okdoseweb/near/near-wallet'
 import * as dotenv from 'dotenv';
