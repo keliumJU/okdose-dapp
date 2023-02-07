@@ -3,7 +3,7 @@ import {cleanup, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom'
 import * as dotenv from 'dotenv';
 import { join } from 'path';
-import App from '../App';
+import Prescription from '../components/Prescription';
 import i18n from '../i18n/i18n';
 import { I18nextProvider } from 'react-i18next'
 
@@ -11,7 +11,7 @@ dotenv.config({path: join(__dirname, '../', '.env')})
 
 describe('Test rendering of components', () => {
   let miltefosine;
-  beforeEach(async () => {
+  beforeEach(() => {
     miltefosine = {
       name: 'leishmaniasis.miltefosine.name',
       presentation: 'leishmaniasis.miltefosine.presentation',
@@ -25,11 +25,11 @@ describe('Test rendering of components', () => {
   // unmount and cleanup DOM after the test is finished.
   afterEach(cleanup);
 
-  test('App component rendering with translations in english', () => {
+  test('prescription component rendering with translations in english', () => {
     i18n.changeLanguage('en')
     render(
       <I18nextProvider i18n={i18n}>
-        <App prescription={miltefosine}/>,
+        <Prescription prescription={miltefosine}/>,
       </I18nextProvider>
     );
     expect(screen.getByRole('heading')).toBeInTheDocument();
@@ -39,11 +39,11 @@ describe('Test rendering of components', () => {
       .toHaveTextContent('Dosage divided into 2 to 3 daily doses');
   });
 
-  test('App component rendering with translations in spanish', () => {
+  test('prescription component rendering with translations in spanish', () => {
     i18n.changeLanguage('es')
     render(
       <I18nextProvider i18n={i18n}>
-        <App prescription={miltefosine}/>,
+        <Prescription prescription={miltefosine}/>,
       </I18nextProvider>
     );
     expect(screen.getByRole('heading')).toBeInTheDocument();
