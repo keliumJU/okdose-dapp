@@ -1,14 +1,9 @@
 import React from 'react';
-import routes from './routes.json'
+import routes from './routes.json';
 import Home from '../containers/Home';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
-function RouteConfig() {
+function RouteConfig () {
   return (
     <Router>
       <div>
@@ -18,11 +13,11 @@ function RouteConfig() {
           </li>
         </ul>
         <Routes>
-          <Route exact path={routes.home} element={<Home/>}/>
+          <Route exact path={routes.home} element={<Home />} />
         </Routes>
       </div>
     </Router>
-  )
+  );
 }
 
-export default RouteConfig
+export default RouteConfig;

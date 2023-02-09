@@ -1,11 +1,9 @@
 import React from 'react';
 import RouterConfig from './router/routeConfig';
-import './assets/styles/main.css'
+import './assets/styles/main.css';
 
-function App() {
-  return (
-    <RouterConfig />
-  );
+function App () {
+  return <RouterConfig />;
 }
 
-export default App
+export default App;

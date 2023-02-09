@@ -1,4 +1,8 @@
 {
+  "app_info": {
+    "weight_button": "Calcular",
+    "back_button": "Volver"
+  },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitidas por Vectores"
   },
@@ -10,7 +14,10 @@
     "visceral": "Leishmaniasis visceral",
     "n_metil_glucamine": {
       "name": "N-Metil Glucamina",
-      "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
+      "presentation": [
+        "Amp 1500 mg * 5 ml (Sb5 + 405 mg)",
+        "20 $t(dosage_unit)"
+      ],
       "via": "IM",
       "frequency": "cada día",
       "warning": "Máximo 20 ml por día. Dosis mayores requieren ser valoradas por un especialista",
@@ -58,14 +65,17 @@
       "frequency": "cada día",
       "warning_under_10_kg": "No administrar a pacientes con menos de 10kg",
       "warning_under_150_mg": "No se deben superar 150 mg al día",
-      "treatment_time": [
-        "28 días"
-      ],
+      "treatment_time": ["28 días"],
       "note": "Dosificación dividida en 2 a 3 dosis diarias"
     },
     "amphotericin_b_liposomal": {
       "name": "Anfotericina B Liposomal",
-      "presentation": ["Anfotericina B liposomal - Frasco Ampolla x 50 mg", "{{dose}} $t(dosage_unit)", "paciente inmunocompetente", "paciente inmunocomprometido"],
+      "presentation": [
+        "Anfotericina B liposomal - Frasco Ampolla x 50 mg",
+        "{{dose}} $t(dosage_unit)",
+        "paciente inmunocompetente",
+        "paciente inmunocomprometido"
+      ],
       "dosage_prescription": "{{volumeDose}} al día, infusión durante 2 horas ({{weightDose}})",
       "warning": "No superar 250 mg al día",
       "treatment_time": {

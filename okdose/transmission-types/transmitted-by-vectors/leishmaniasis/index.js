@@ -4,9 +4,12 @@
  * @param {number} weight Patient's weight in kg to one decimal point
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
-const prescribeNMetilGlucamine = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.NMETIL_CONTRACT, process.env.CONTRACT_METHOD, { weight })
-);
+const prescribeNMetilGlucamine = async (nearInterface, weight) =>
+  nearInterface.viewMethod(
+    process.env.NMETIL_CONTRACT,
+    process.env.CONTRACT_METHOD,
+    {weight}
+  );
 
 /**
  * Gets the translation keys and dosage of the smart contract Sodium stibogluconate.
@@ -14,9 +17,12 @@ const prescribeNMetilGlucamine = async (nearInterface, weight) => (
  * @param {number} weight Patient's weight in kg to one decimal point
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
-const prescribeSodiumStibogluconate = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.STIBOGLUCONATE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
-);
+const prescribeSodiumStibogluconate = async (nearInterface, weight) =>
+  nearInterface.viewMethod(
+    process.env.STIBOGLUCONATE_CONTRACT,
+    process.env.CONTRACT_METHOD,
+    {weight}
+  );
 
 /**
  * Gets the translation keys and dosage of the smart contract Pentamidine isethionate.
@@ -24,18 +30,24 @@ const prescribeSodiumStibogluconate = async (nearInterface, weight) => (
  * @param {number} weight Patient's weight in kg to one decimal point
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
-const prescribePentamidineIsethionate = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.PENTAMIDINE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
-);
+const prescribePentamidineIsethionate = async (nearInterface, weight) =>
+  nearInterface.viewMethod(
+    process.env.PENTAMIDINE_CONTRACT,
+    process.env.CONTRACT_METHOD,
+    {weight}
+  );
 /**
  * Gets the translation keys and dosage of the smart contract Miltefosine.
  * @param {NearInterface} nearInterface Class that allows the connection to a near wallet.
  * @param {number} weight Patient's weight in kg to one decimal point
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
-const prescribeMiltefosine = async (nearInterface, weight) => (
-  nearInterface.viewMethod(process.env.MILTEFOSINE_CONTRACT, process.env.CONTRACT_METHOD, { weight })
-);
+const prescribeMiltefosine = async (nearInterface, weight) =>
+  nearInterface.viewMethod(
+    process.env.MILTEFOSINE_CONTRACT,
+    process.env.CONTRACT_METHOD,
+    {weight}
+  );
 
 /**
  * Gets the translation keys and dosage of the smart contract Amphotericin B Liposomalr.
@@ -46,9 +58,16 @@ const prescribeMiltefosine = async (nearInterface, weight) => (
  * and 2, 3, 4 are the concentration in mg/kg/day.
  * @returns {Prescription} It is an object that has the translation keys and the prescribed dosage.
  */
-const prescribeAmphotericinBLiposomal = async (nearInterface, weight, prescriptionType) => (
-  nearInterface.viewMethod(process.env.AMPHOTERICINBLIPOSOMAL_CONTRACT, process.env.CONTRACT_METHOD, { weight, prescriptionType })
-);
+const prescribeAmphotericinBLiposomal = async (
+  nearInterface,
+  weight,
+  prescriptionType
+) =>
+  nearInterface.viewMethod(
+    process.env.AMPHOTERICINBLIPOSOMAL_CONTRACT,
+    process.env.CONTRACT_METHOD,
+    {weight, prescriptionType}
+  );
 
 export {
   prescribeNMetilGlucamine,
