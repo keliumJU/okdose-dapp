@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 function TitleWeightCard ({title}) {
   return (
     <div
@@ -9,9 +10,11 @@ function TitleWeightCard ({title}) {
     </div>
   );
 }
+
 TitleWeightCard.defaultProps = {
   title: 'Results'
 };
+
 TitleWeightCard.propTypes = {
   title: PropTypes.string
 };

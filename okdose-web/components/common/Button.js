@@ -1,4 +1,4 @@
-import Back from '../../assets/images/icons/back.svg';
+import backArrowIcon from '../../assets/images/icons/backArrowIcon.svg';
 import PropTypes from 'prop-types';
 import {useTranslation} from 'react-i18next';
 
@@ -13,7 +13,7 @@ function Button ({type, titleKey}) {
     <button
       className={`${buttonStyles[type]} not-italic font-semibold text-base text-center text-white flex flex-row justify-center items-center px-6 gap-2`}
     >
-      {type === 'back' && <img src={Back} alt='icon-back' />}
+      {type === 'back' && <img src={backArrowIcon} alt='icon-back' />}
       {t(`${titleKey}`)}
     </button>
   );

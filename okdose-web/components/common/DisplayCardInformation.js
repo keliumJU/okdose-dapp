@@ -1,4 +1,4 @@
-import Next from '../../assets/images/icons/next.svg';
+import forwardArrowIcon from '../../assets/images/icons/forwardArrowIcon.svg';
 
 function DisplayCardInformation () {
   return (
@@ -14,7 +14,7 @@ function DisplayCardInformation () {
       </div>
       <div className='flex flex-row justify-end items-center text-sm not-itali font-normal mb-5'>
         <p>See more</p>
-        <img className='pl-1' src={Next} alt='icon-next' />
+        <img className='pl-1' src={forwardArrowIcon} alt='icon-next' />
       </div>
       <hr className='divide-solid bg-gray-200 h-1' />
     </div>
