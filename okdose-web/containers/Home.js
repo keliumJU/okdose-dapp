@@ -21,23 +21,19 @@ function Home () {
       const result = await response;
       setPrescription(result);
     };
-    getPrescription().catch(console.error);
+    getPrescription()
+    .catch((e)=>{
+      console.error(e)
+    });
   }, []);
 
   return (
     <div className='static'>
       <h1>OKdose</h1>
       <div className='flex flex-col justify-center items-center pl-5 pr-5 pb-0 gap-16'>
-        <>{console.log('this is prescription', prescription)}</>
         <I18nextProvider i18n={i18n}>
           <DisplayCardInformation prescription={prescription} />
           <WeightCard />
-          <>
-            {console.log(
-              'this is prescription in translate component',
-              prescription
-            )}
-          </>
           <PrescriptionView prescription={prescription} />
         </I18nextProvider>
       </div>
