@@ -11,19 +11,21 @@ import WeightCard from '../components/common/WeightCard';
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
   const [prescription, setPrescription] = useState({});
-  const weight = 70;
+  const DEFAULT_WEIGHT = 70;
 
   useEffect(() => {
     const getPrescription = async () => {
       await wallet.startUp();
       const nearInterface = new NearInterface({walletToUse: wallet});
-      const response = await prescribeMiltefosine(nearInterface, weight);
+      const response = await prescribeMiltefosine(
+        nearInterface,
+        DEFAULT_WEIGHT
+      );
       const result = await response;
       setPrescription(result);
     };
-    getPrescription()
-    .catch((e)=>{
-      console.error(e)
+    getPrescription().catch((e) => {
+      console.error(e);
     });
   }, []);
 
