@@ -1,8 +1,8 @@
 import {useTranslation} from 'react-i18next';
 import PropTypes from 'prop-types';
 
-function PrescriptionView ({prescription}) {
-  const {
+function PrescriptionView ({
+  prescription: {
     name,
     presentation,
     treatmentTime,
@@ -10,7 +10,8 @@ function PrescriptionView ({prescription}) {
     note,
     weightDose,
     volumeDose
-  } = prescription;
+  }
+}) {
   const {t} = useTranslation();
   return (
     <div className='flex flex-col'>
@@ -29,8 +30,9 @@ function PrescriptionView ({prescription}) {
 PrescriptionView.defaultProps = {
   prescription: {}
 };
+
 PrescriptionView.propTypes = {
-  title: PropTypes.object
+  prescription: PropTypes.object.isRequired
 };
 
 export default PrescriptionView;

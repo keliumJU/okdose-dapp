@@ -1,7 +1,9 @@
 {
   "app_info": {
     "weight_button": "Calculate",
-    "back_button": "Back"
+    "back_button": "Back",
+    "dosage": "Dosage",
+    "see_more": "See more"
   },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitted by Vectors"

@@ -1,7 +1,11 @@
 import {Worker} from 'near-workspaces';
 import {test} from './initTest';
+import ContractCredentials from './ContractCredentials';
 
-export default function initContract(contractAccount: string, blockId: string) {
+export default function initContract({
+  contractAccount,
+  blockId
+}: ContractCredentials) {
   // Init the worker and start a Sandbox server
   test.beforeEach(async (t) => {
     // Init the worker and start a Sandbox server

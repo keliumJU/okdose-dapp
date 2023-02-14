@@ -11,12 +11,13 @@ import WeightCard from '../components/common/WeightCard';
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
   const [prescription, setPrescription] = useState({});
+  const weight = 70;
 
   useEffect(() => {
     const getPrescription = async () => {
       await wallet.startUp();
       const nearInterface = new NearInterface({walletToUse: wallet});
-      const response = await prescribeMiltefosine(nearInterface, 70);
+      const response = await prescribeMiltefosine(nearInterface, weight);
       const result = await response;
       setPrescription(result);
     };
@@ -27,9 +28,16 @@ function Home () {
     <div className='static'>
       <h1>OKdose</h1>
       <div className='flex flex-col justify-center items-center pl-5 pr-5 pb-0 gap-16'>
-        <DisplayCardInformation />
+        <>{console.log('this is prescription', prescription)}</>
         <I18nextProvider i18n={i18n}>
+          <DisplayCardInformation prescription={prescription} />
           <WeightCard />
+          <>
+            {console.log(
+              'this is prescription in translate component',
+              prescription
+            )}
+          </>
           <PrescriptionView prescription={prescription} />
         </I18nextProvider>
       </div>

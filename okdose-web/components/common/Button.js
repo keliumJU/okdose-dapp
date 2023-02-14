@@ -19,13 +19,9 @@ function Button ({type, titleKey}) {
   );
 }
 
-Button.defaultProps = {
-  type: 'weight',
-  titleKey: 'app_info.weight_button'
-};
 Button.propTypes = {
-  type: PropTypes.string,
-  titleKey: PropTypes.string
+  type: PropTypes.string.isRequired,
+  titleKey: PropTypes.string.isRequired
 };
 
 export default Button;

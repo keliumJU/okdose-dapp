@@ -11,12 +11,8 @@ function TitleWeightCard ({title}) {
   );
 }
 
-TitleWeightCard.defaultProps = {
-  title: 'Results'
-};
-
 TitleWeightCard.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string.isRequired
 };
 
 export default TitleWeightCard;
