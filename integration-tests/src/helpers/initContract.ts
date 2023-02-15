@@ -1,7 +1,11 @@
-import { Worker } from 'near-workspaces';
-import { test } from './initTest'
+import {Worker} from 'near-workspaces';
+import {test} from './initTest';
+import ContractCredentials from './ContractCredentials';
 
-export default function initContract (contractAccount: string, blockId: string) {
+export default function initContract({
+  contractAccount,
+  blockId
+}: ContractCredentials) {
   // Init the worker and start a Sandbox server
   test.beforeEach(async (t) => {
     // Init the worker and start a Sandbox server
@@ -13,16 +17,16 @@ export default function initContract (contractAccount: string, blockId: string) 
     const contract = await root.importContract({
       testnetContract: contractAccount,
       blockId: blockId,
-      withData: false,
+      withData: false
     });
     // Save state for test runs, it is unique for each test
     t.context.worker = worker;
-    t.context.accounts = {root, contract };
+    t.context.accounts = {root, contract};
   });
 
   test.afterEach.always(async (t) => {
-    await t.context.worker.tearDown().catch(error => {
-      new Error(`Failed to tear down the worker: ${error}`)
+    await t.context.worker.tearDown().catch((error) => {
+      new Error(`Failed to tear down the worker: ${error}`);
     });
   });
 }

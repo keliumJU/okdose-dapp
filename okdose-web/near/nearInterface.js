@@ -7,7 +7,7 @@ class NearInterface {
    * Initializes an object of type wallet
    * @param  {[Wallet]} walletToUse [wallet to access the near blockchain]
    */
-  constructor({ walletToUse }) {
+  constructor ({walletToUse}) {
     this.wallet = walletToUse;
   }
 
@@ -18,8 +18,12 @@ class NearInterface {
    * @param  {Object} args       [Arguments received by the view function in the smart contract]
    * @return {Prescription}      [Object that has the translation keys and the prescribed dosage]
    */
-  async viewMethod(contractId, method, args = {}) {
-    return await this.wallet.viewMethod({ contractId: contractId, method: method, args: args});
+  async viewMethod (contractId, method, args = {}) {
+    return await this.wallet.viewMethod({
+      contractId: contractId,
+      method: method,
+      args: args
+    });
   }
 }
 

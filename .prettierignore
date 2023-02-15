@@ -1,0 +1,3 @@
+# Ignore dist folders:
+/okdose-web/dist/**
+/okdose-web/near/nearWallet.js

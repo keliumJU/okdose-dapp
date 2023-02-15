@@ -1,8 +1,8 @@
 {
-  "bracketSpacing": true,
+  "bracketSpacing": false,
   "bracketSameLine": false,
   "singleQuote": true,
-  "trailingComma": "all",
+  "trailingComma": "none",
   "jsxSingleQuote": true,
   "proseWrap": "never",
   "tabWidth": 2

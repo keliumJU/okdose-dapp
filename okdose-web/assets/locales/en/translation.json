@@ -1,4 +1,10 @@
 {
+  "app_info": {
+    "weight_button": "Calculate",
+    "back_button": "Back",
+    "dosage": "Dosage",
+    "see_more": "See more"
+  },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitted by Vectors"
   },
@@ -10,7 +16,10 @@
     "visceral": "Visceral leishmaniasis",
     "n_metil_glucamine": {
       "name": "N-Metil Glucamine",
-      "presentation": ["Amp 1500 mg * 5 ml (Sb5 + 405 mg)", "20 $t(dosage_unit)"],
+      "presentation": [
+        "Amp 1500 mg * 5 ml (Sb5 + 405 mg)",
+        "20 $t(dosage_unit)"
+      ],
       "via": "IM",
       "frequency": "daily",
       "warning": "Maximum 20 ml per day. Larger doses require specialist evaluation.",
@@ -58,14 +67,17 @@
       "frequency": "every day",
       "warning_under_10_kg": "Do not deliver to patients with weight less than 10kg",
       "warning_under_150_mg": "Do not exceed 150 mg per day",
-      "treatment_time": [
-        "28 days"
-      ],
+      "treatment_time": ["28 days"],
       "note": "Dosage divided into 2 to 3 daily doses"
     },
     "amphotericin_b_liposomal": {
       "name": "Amphotericin B Liposomal",
-      "presentation": ["Amphotericin B Liposomal - Blister vial x 50 mg", "{{dose}} $t(dosage_unit)", "immunocompetent patient", "immunocompromised patient"],
+      "presentation": [
+        "Amphotericin B Liposomal - Blister vial x 50 mg",
+        "{{dose}} $t(dosage_unit)",
+        "immunocompetent patient",
+        "immunocompromised patient"
+      ],
       "dosage_prescription": "{{volumeDose}} a day, infusion during 2 hours ({{weightDose}})",
       "warning": "Do not exceed 250 mg per day",
       "treatment_time": {

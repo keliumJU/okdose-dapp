@@ -1,5 +1,5 @@
-import { NearAccount, Worker } from 'near-workspaces';
-import anyTest, { TestFn } from 'ava';
+import {NearAccount, Worker} from 'near-workspaces';
+import anyTest, {TestFn} from 'ava';
 
 export const test = anyTest as TestFn<{
   worker: Worker;
