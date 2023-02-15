@@ -6,6 +6,16 @@ module.exports = {
     '*.{html,js}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'gray-welcome': '#838383',
+        'blue-pale': '#BFDBFE'
+      },
+      backgroundImage: {
+        'background-welcome': 'url(\'/assets/images/background.png\')',
+        'background-mobile-welcome':
+          'url(\'/assets/images/background-mobile.png\')'
+      }
+    }
   }
 };
