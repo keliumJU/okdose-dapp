@@ -6,17 +6,15 @@ function Footer ({showExtraInfo}) {
   const {t} = useTranslation();
 
   return (
-    <div className='flex flex-col gap-4 items-center'>
+    <div className='flex flex-col items-center pb-10'>
       <p className='text-gray-welcome text-center'>
         {t('app_info.footer_presentation')}
       </p>
-      {showExtraInfo ? (
+      {showExtraInfo && (
         <>
-          <FooterButton title={t('app_info.politics')} />
-          <FooterButton title={t('app_info.credits')} />
+          <FooterButton title={t('app_info.footer_politics')} />
+          <FooterButton title={t('app_info.footer_credits')} />
         </>
-      ) : (
-        <></>
       )}
     </div>
   );

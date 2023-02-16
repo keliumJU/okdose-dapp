@@ -12,8 +12,8 @@ module.exports = {
         'blue-pale': '#BFDBFE'
       },
       backgroundImage: {
-        'background-welcome': 'url(\'/assets/images/background.png\')',
-        'background-mobile-welcome':
+        'welcome-background': 'url(\'/assets/images/background.png\')',
+        'welcome-background-mobile':
           'url(\'/assets/images/background-mobile.png\')'
       }
     }
