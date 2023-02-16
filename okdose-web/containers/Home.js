@@ -6,6 +6,7 @@ import NearInterface from '../near/nearInterface';
 import {prescribeMiltefosine} from '../../okdose/transmission-types/transmitted-by-vectors/leishmaniasis';
 import WeightCard from '../components/common/WeightCard';
 import Welcome from '../components/Welcome';
+import DropdownMenu from '../components/DropdownMenu';
 
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
@@ -42,10 +43,11 @@ function Home () {
           <Welcome />
         </>
       ) : (
-        <div className='flex flex-col justify-center items-center pl-5 pr-5 pb-0 gap-16'>
+        <div className='flex flex-col justify-center items-center'>
           <h1>OKdose</h1>
-          <DisplayCardInformation prescription={prescription} />
+          <DropdownMenu />
           <WeightCard />
+          <DisplayCardInformation />
           <PrescriptionView prescription={prescription} />
         </div>
       )}

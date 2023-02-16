@@ -9,10 +9,18 @@
     "footer_credits": "Créditos"
   },
   "transmission_types": {
-    "transmitted_by_vectors": "Transmitidas por Vectores"
+    "transmitted_by_vectors": "Transmitidas por Vectores",
+    "zoonoses": "Zoonosis",
+    "mycobacteria": "Micobacterias"
   },
   "dosage_unit": "mg/kg/día",
   "to": "a",
+  "malaria": {
+    "name": "Malaria"
+  },
+  "chagas_disease": {
+    "name": "Enfermedad de Chagas"
+  },
   "leishmaniasis": {
     "name": "Leishmaniasis",
     "cutaneous_mococutaneous": "Leishmaniasis cutánea y mucocutánea",

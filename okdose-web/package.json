@@ -58,6 +58,7 @@
     "near-cli": "^3.4.2",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
+    "react-collapsed": "^3.6.0",
     "react-dom": "^18.1.0",
     "react-i18next": "^12.1.1",
     "react-router-dom": "^6.8.0",
