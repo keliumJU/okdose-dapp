@@ -4,14 +4,20 @@ import {useEffect, useState} from 'react';
 import {Wallet} from '../near/nearWallet';
 import NearInterface from '../near/nearInterface';
 import {prescribeMiltefosine} from '../../okdose/transmission-types/transmitted-by-vectors/leishmaniasis';
-import i18n from '../i18n/i18n';
-import {I18nextProvider} from 'react-i18next';
 import WeightCard from '../components/common/WeightCard';
+import Welcome from '../components/Welcome';
 
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
   const [prescription, setPrescription] = useState({});
+  const [loadWelcome, setLoadWelcome] = useState(true);
   const DEFAULT_WEIGHT = 70;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadWelcome(false);
+    }, 2000);
+  }, []);
 
   useEffect(() => {
     const getPrescription = async () => {
@@ -31,14 +37,18 @@ function Home () {
 
   return (
     <div className='static'>
-      <h1>OKdose</h1>
-      <div className='flex flex-col justify-center items-center pl-5 pr-5 pb-0 gap-16'>
-        <I18nextProvider i18n={i18n}>
+      {loadWelcome ? (
+        <>
+          <Welcome />
+        </>
+      ) : (
+        <div className='flex flex-col justify-center items-center pl-5 pr-5 pb-0 gap-16'>
+          <h1>OKdose</h1>
           <DisplayCardInformation prescription={prescription} />
           <WeightCard />
           <PrescriptionView prescription={prescription} />
-        </I18nextProvider>
-      </div>
+        </div>
+      )}
     </div>
   );
 }
