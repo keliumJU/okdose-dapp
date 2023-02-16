@@ -4,9 +4,10 @@ import {useEffect, useState} from 'react';
 import {Wallet} from '../near/nearWallet';
 import NearInterface from '../near/nearInterface';
 import {prescribeMiltefosine} from '../../okdose/transmission-types/transmitted-by-vectors/leishmaniasis';
-import WeightCard from '../components/common/WeightCard';
 import Welcome from '../components/Welcome';
 import DropdownMenu from '../components/DropdownMenu';
+import CardInputWeight from '../components/CardInputWeight';
+import {t} from 'i18next';
 
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
@@ -45,7 +46,14 @@ function Home () {
       ) : (
         <div className='flex flex-col justify-center items-center'>
           <h1>OKdose</h1>
-          <WeightCard />
+          <CardInputWeight
+            titleContent={t('app_info.card_selection_title')}
+            description={t('app_info.input_weight_description', {weight: '5'})}
+            lowerBound={5}
+            upperBound={50}
+            disableComponent={false}
+          />
+          <DisplayCardInformation prescription={prescription} />
           <DisplayCardInformation prescription={prescription} />
           <PrescriptionView prescription={prescription} />
           <DropdownMenu />
