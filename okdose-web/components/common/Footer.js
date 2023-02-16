@@ -25,7 +25,7 @@ Footer.defaultProps = {
 };
 
 Footer.propTypes = {
-  showExtraInfo: PropTypes.string
+  showExtraInfo: PropTypes.bool
 };
 
 export default Footer;

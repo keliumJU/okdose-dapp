@@ -1,7 +1,7 @@
 import React from 'react';
 import {cleanup, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import i18n from '../i18n/i18n';
+import i18n from '../i18n';
 import {I18nextProvider} from 'react-i18next';
 import Welcome from '../components/Welcome';
 

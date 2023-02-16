@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import * as dotenv from 'dotenv';
 import {join} from 'path';
 import PrescriptionView from '../components/PrescriptionView';
-import i18n from '../i18n/i18n';
+import i18n from '../i18n';
 import {I18nextProvider} from 'react-i18next';
 
 dotenv.config({path: join(__dirname, '../', '.env')});
