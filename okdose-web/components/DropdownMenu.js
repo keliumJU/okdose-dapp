@@ -2,22 +2,16 @@ import Section from './common/Section';
 import DropdownMenuButton from './common/DropdownMenuButton';
 import {useTranslation} from 'react-i18next';
 import {transmissionTypes} from '../../okdose/app';
+import byVectorsIcon from '../assets/images/icons/byVectorsIcon.svg';
+import zonosesIcon from '../assets/images/icons/zoonosesIcon.svg';
+import mycobacteriaIcon from '../assets/images/icons/mycobacteriaIcon.svg';
 
 function DropdownMenu () {
   const {t} = useTranslation();
   const transmissionTypesIcons = {
-    byVectorsIcon: new URL(
-      '../assets/images/icons/byVectorsIcon.svg',
-      import.meta.url
-    ),
-    mycobacteriaIcon: new URL(
-      '../assets/images/icons/mycobacteriaIcon.svg',
-      import.meta.url
-    ),
-    zoonosesIcon: new URL(
-      '../assets/images/icons/zoonosesIcon.svg',
-      import.meta.url
-    )
+    byVectorsIcon: byVectorsIcon,
+    mycobacteriaIcon: mycobacteriaIcon,
+    zoonosesIcon: zonosesIcon
   };
   const listSections = Object.keys(transmissionTypes).map((medium, index) => (
     <Section

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import useCollapse from 'react-collapsed';
 import PropTypes from 'prop-types';
@@ -19,6 +18,7 @@ function Section ({
 
   return (
     <div className='px-5 w-full p-2'>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <div className='header bg-white text-neutral-700' {...getToggleProps()}>
         <div className='flex flex-row justify-center items-center p-4 font-semibold'>
           <div className='pr-1'>
@@ -31,6 +31,7 @@ function Section ({
           </div>
         </div>
       </div>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <div {...getCollapseProps()} className='bg-white pl-12'>
         {children}
       </div>
