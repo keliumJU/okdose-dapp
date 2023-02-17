@@ -8,21 +8,23 @@ import mycobacteriaIcon from '../assets/images/icons/mycobacteriaIcon.svg';
 
 function DropdownMenu () {
   const {t} = useTranslation();
+
   const transmissionTypesIcons = {
     byVectorsIcon: byVectorsIcon,
     mycobacteriaIcon: mycobacteriaIcon,
     zoonosesIcon: zonosesIcon
   };
+
   const listSections = Object.keys(transmissionTypes).map((medium, index) => (
     <Section
       key={index}
       title={t(`${transmissionTypes[medium].name}`)}
       iconMedium={transmissionTypesIcons[transmissionTypes[medium].icon]}
     >
-      {Object.keys(transmissionTypes[medium].types).map((disease, index) => (
+      {Object.keys(transmissionTypes[medium].diseases).map((disease, index) => (
         <DropdownMenuButton
           key={index}
-          title={t(`${transmissionTypes[medium].types[disease].name}`)}
+          title={t(`${transmissionTypes[medium].diseases[disease].name}`)}
         />
       ))}
     </Section>

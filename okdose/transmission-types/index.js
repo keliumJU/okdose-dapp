@@ -7,11 +7,13 @@ const transmittedByVectors = {
 };
 
 const zoonoses = {
-  name: 'transmission_types.zoonoses'
+  name: 'transmission_types.zoonoses',
+  diseases: {}
 };
 
 const mycobacteria = {
-  name: 'transmission_types.mycobacteria'
+  name: 'transmission_types.mycobacteria',
+  diseases: {}
 };
 
 export {transmittedByVectors, zoonoses, mycobacteria};

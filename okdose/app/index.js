@@ -6,21 +6,16 @@ import {
 
 const transmissionTypes = {
   byVectors: {
-    name: transmittedByVectors.name,
-    icon: 'byVectorsIcon',
-    types: {
-      leishmaniasis: transmittedByVectors.diseases.leishmaniasis
-    }
+    ...transmittedByVectors,
+    icon: 'byVectorsIcon'
   },
   zoonoses: {
-    name: zoonoses.name,
-    icon: 'zoonosesIcon',
-    types: {}
+    ...zoonoses,
+    icon: 'zoonosesIcon'
   },
   mycobacteria: {
-    name: mycobacteria.name,
-    icon: 'mycobacteriaIcon',
-    types: {}
+    ...mycobacteria,
+    icon: 'mycobacteriaIcon'
   }
 };
 
