@@ -44,7 +44,6 @@ function Home () {
         </>
       ) : (
         <div className='flex flex-col justify-center items-center'>
-          <h1 className='uppercase overflow-hidden text-lg'>Mycobactéries</h1>
           <h1>OKdose</h1>
           <WeightCard />
           <DisplayCardInformation prescription={prescription} />
