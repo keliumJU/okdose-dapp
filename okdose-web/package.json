@@ -83,7 +83,7 @@
     "verbose": true,
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
-      "^.+\\.svg$": "jest-svg-transformer"
+      "^.+\\.svg?.+$": "jest-svg-transformer"
     }
   }
 }

@@ -6,4 +6,12 @@ const transmittedByVectors = {
   diseases: transmittedByVectorsDiseases
 };
 
-export {transmittedByVectors};
+const zoonoses = {
+  name: 'transmission_types.zoonoses'
+};
+
+const mycobacteria = {
+  name: 'transmission_types.mycobacteria'
+};
+
+export {transmittedByVectors, zoonoses, mycobacteria};

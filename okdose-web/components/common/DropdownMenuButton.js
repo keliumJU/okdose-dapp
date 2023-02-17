@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
+import rightIcon from '../../assets/images/icons/rightIcon.svg';
 
-function DropdownMenuButton ({title, icon}) {
+function DropdownMenuButton ({title}) {
   return (
     <button className='flex flex-row w-full text-neutral-500 p-4 focus:text-indigo-700'>
-      <div className='text-xl font-medium text-left'>{title}</div>
+      <h6 className='text-xl font-medium text-left'>{title}</h6>
       <div className='ml-auto'>
-        <img src={icon} className='w-5 h-5' alt='caret-down-icon' />
+        <img src={rightIcon} className='w-5 h-5' alt='right-icon' />
       </div>
     </button>
   );
 }
 
 DropdownMenuButton.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 };
 
 export default DropdownMenuButton;

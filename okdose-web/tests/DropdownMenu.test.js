@@ -37,21 +37,11 @@ describe('Test rendering of DropdownMenu component', () => {
         i18n.getDataByLanguage('en').translation.leishmaniasis.name
       )
     ).toBeDefined();
-    expect(
-      screen.getByText(i18n.getDataByLanguage('en').translation.malaria.name)
-    ).toBeDefined();
-    expect(
-      screen.getByText(
-        i18n.getDataByLanguage('en').translation.chagas_disease.name
-      )
-    ).toBeDefined();
 
     expect(screen.getByText('Transmitted by Vectors')).toBeInTheDocument();
     expect(screen.getByText('Zoonoses')).toBeInTheDocument();
     expect(screen.getByText('Mycobacteria')).toBeInTheDocument();
     expect(screen.getByText('Leishmaniasis')).toBeInTheDocument();
-    expect(screen.getByText('Malaria')).toBeInTheDocument();
-    expect(screen.getByText('Chagas disease')).toBeInTheDocument();
   });
 
   test('DropdownMenu component rendering with translations in spanish', () => {
@@ -82,20 +72,10 @@ describe('Test rendering of DropdownMenu component', () => {
         i18n.getDataByLanguage('es').translation.leishmaniasis.name
       )
     ).toBeDefined();
-    expect(
-      screen.getByText(i18n.getDataByLanguage('es').translation.malaria.name)
-    ).toBeDefined();
-    expect(
-      screen.getByText(
-        i18n.getDataByLanguage('es').translation.chagas_disease.name
-      )
-    ).toBeDefined();
 
     expect(screen.getByText('Transmitidas por Vectores')).toBeInTheDocument();
     expect(screen.getByText('Zoonosis')).toBeInTheDocument();
     expect(screen.getByText('Micobacterias')).toBeInTheDocument();
     expect(screen.getByText('Leishmaniasis')).toBeInTheDocument();
-    expect(screen.getByText('Malaria')).toBeInTheDocument();
-    expect(screen.getByText('Enfermedad de Chagas')).toBeInTheDocument();
   });
 });

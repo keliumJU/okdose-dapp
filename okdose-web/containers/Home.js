@@ -11,7 +11,7 @@ import DropdownMenu from '../components/DropdownMenu';
 function Home () {
   const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
   const [prescription, setPrescription] = useState({});
-  const [loadWelcome, setLoadWelcome] = useState(true);
+  const [loadWelcome, setLoadWelcome] = useState(false);
   const DEFAULT_WEIGHT = 70;
 
   useEffect(() => {
@@ -44,11 +44,12 @@ function Home () {
         </>
       ) : (
         <div className='flex flex-col justify-center items-center'>
+          <h1 className='uppercase overflow-hidden text-lg'>Mycobactéries</h1>
           <h1>OKdose</h1>
-          <DropdownMenu />
           <WeightCard />
-          <DisplayCardInformation />
+          <DisplayCardInformation prescription={prescription} />
           <PrescriptionView prescription={prescription} />
+          <DropdownMenu />
         </div>
       )}
     </div>
