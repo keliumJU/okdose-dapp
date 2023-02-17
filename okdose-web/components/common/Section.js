@@ -8,7 +8,7 @@ function Section ({
   collapsedHeight,
   title,
   children,
-  iconName
+  iconMedium
 }) {
   const config = {
     defaultExpanded: defaultExpanded || false,
@@ -21,7 +21,7 @@ function Section ({
       <div className='header bg-white text-neutral-700' {...getToggleProps()}>
         <div className='flex flex-row justify-center items-center p-4 font-semibold'>
           <div className='pr-1'>
-            <img src={iconName} className='w-6 h-6 mr-5' alt='icon-name' />
+            <img src={iconMedium} className='w-6 h-6 mr-5' alt='icon-name' />
           </div>
           {isExpanded}
           <h6 className='text-xl uppercase'>{title}</h6>
@@ -42,8 +42,7 @@ Section.propTypes = {
   collapsedHeight: PropTypes.number,
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
-  iconName: PropTypes.string.isRequired,
-  iconRight: PropTypes.string.isRequired
+  iconMedium: PropTypes.string.isRequired
 };
 
 export default Section;

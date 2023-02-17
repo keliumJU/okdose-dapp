@@ -6,11 +6,11 @@ import {transmissionTypes} from '../../okdose/app';
 function DropdownMenu () {
   const {t} = useTranslation();
 
-  const listItems = Object.keys(transmissionTypes).map((medium, index) => (
+  const listSections = Object.keys(transmissionTypes).map((medium, index) => (
     <Section
       key={index}
       title={t(`${transmissionTypes[medium].name}`)}
-      iconName={transmissionTypes[medium].icon}
+      iconMedium={transmissionTypes[medium].icon}
     >
       {Object.keys(transmissionTypes[medium].types).map((disease, index) => (
         <DropdownMenuButton
@@ -23,7 +23,7 @@ function DropdownMenu () {
 
   return (
     <div className='m-auto w-full sm:m-auto sm:w-[420px] sm:h-[180px] sm:z-10'>
-      {listItems}
+      {listSections}
     </div>
   );
 }
