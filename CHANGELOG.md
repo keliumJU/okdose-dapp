@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 (20.02.2023)
+
+- Add the front end basic functionality with the router configuration
+- Create the welcome page
+- Create the dropdown menu component
+
 ## 0.1.1 (03.02.2023)
 
 - Update the README links to the support documents
