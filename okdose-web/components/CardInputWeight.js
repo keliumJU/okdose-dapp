@@ -1,7 +1,7 @@
 import Button from './common/Button';
 import {useEffect, useState} from 'react';
 import AlertCard from './common/AlertCard';
-import arrowRightIcon from '../assets/images/icons/arrowRightIcon.svg';
+import arrowRightIcon from '@icons/arrowRightIcon.svg';
 import PropTypes from 'prop-types';
 import {t} from 'i18next';
 
@@ -16,16 +16,16 @@ function CardInputWeight ({
   disableComponent
 }) {
   const [inputValue, setInputValue] = useState();
-  const [fontStyle, setFonStyle] = useState('');
+  const [fontStyle, setFontStyle] = useState('');
   const [buttonStyle, setButtonStyle] = useState('');
 
   useEffect(() => {
     if (disableComponent) {
-      setButtonStyle('weightDisable');
-      setFonStyle('disable');
+      setButtonStyle('weightDisabled');
+      setFontStyle('disable');
     } else {
       setButtonStyle('weight');
-      setFonStyle('normal');
+      setFontStyle('normal');
     }
   }, []);
 
@@ -46,11 +46,12 @@ function CardInputWeight ({
     let value = event.target.value;
     setInputValue(parseInt(value));
     if (value < lowerBound || value > upperBound) {
-      setFonStyle('error');
+      setFontStyle('error');
     } else {
-      setFonStyle('normal');
+      setFontStyle('normal');
     }
   }
+
   return (
     <div className='flex flex-col items-center justify-center'>
       {showTitleCard && (
