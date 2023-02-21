@@ -33,6 +33,7 @@ yarn-error.log*
 
 /okdose-web/dist
 /okdose-web/.parcel-cache
+/okdose-web/coverage
 
 /**/.eslintcache
 

@@ -8,10 +8,10 @@
       "module-resolver",
       {
         "root": ["."],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "extensions": [".js"],
         "alias": {
+          "@icons": "./assets/images/icons",
           "@nearInterface": "../okdose/near/nearInterface",
-          "@leishmaniasis": "../okdose/transmission-types/transmitted-by-vectors/leishmaniasis",
           "@nearWallet": "../okdose/near/nearWallet"
         }
       }

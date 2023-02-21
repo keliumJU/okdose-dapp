@@ -7,7 +7,7 @@ function Footer ({showExtraInfo}) {
 
   return (
     <div className='flex flex-col items-center pb-10'>
-      <p className='text-gray-welcome text-center'>
+      <p className='text-silver-gray text-center'>
         {t('app_info.footer_presentation')}
       </p>
       {showExtraInfo && (

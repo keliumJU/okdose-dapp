@@ -2,11 +2,17 @@
   "app_info": {
     "weight_button": "Calcular",
     "back_button": "Volver",
-    "dosage": "Dosificación",
     "see_more": "Ver más",
     "footer_presentation": "OKDOSE es una aplicación que apoya el cálculo de la dosificación de medicamentos y tiempo de tratamiento para Leishmaniasis, Malaria, Chagas, Rabia, Tuberculosis y Lepra.",
     "footer_politics": "Políticas y regulaciones",
-    "footer_credits": "Créditos"
+    "footer_credits": "Créditos",
+    "input_weight_description": "Ingrese el peso del paciente en kg, recuerda que no puede ser menor a {{weight}} kg",
+    "input_err_lower_bound": "El peso no puede ser menor a {{weight}} kg ingresa un dato valido",
+    "input_err_upper_bound": "El peso no puede ser mayor a {{weight}} kg ingresa un dato valido.",
+    "card_selection_title": "Selección",
+    "card_category_title": "Categoria",
+    "card_dose_title": "Dosificación",
+    "card_results_title": "Resultados"
   },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitidas por Vectores",
