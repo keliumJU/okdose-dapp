@@ -30,7 +30,7 @@ function CardInputWeight ({
   }, []);
 
   const inputStyle = {
-    error: 'text-[#DC2626] placeholder-[#DC2626]',
+    error: 'text-strong-red placeholder-strong-red',
     normal: 'text-black placeholder-gray-400',
     disable: 'text-gray-400'
   };
@@ -64,7 +64,7 @@ function CardInputWeight ({
         <h1 className='w-64 h-9 text-indigo-700 font-medium text-3xl mb-2'>
           {titleContent}
         </h1>
-        <p className='font-normal text-sm text-[#525C7A]'>{description}</p>
+        <p className='font-normal text-sm text-light-gray'>{description}</p>
         <div className='flex flex-row items-center justify-center'>
           <input
             aria-label='weight-input'
