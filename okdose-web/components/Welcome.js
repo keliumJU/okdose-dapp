@@ -5,6 +5,7 @@ import Header from './common/Header';
 function Welcome () {
   return (
     <div
+      data-testid='welcome'
       className='flex flex-col items-center h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-welcome-background-mobile
       sm:flex sm:h-screen sm:bg-welcome-background'
     >

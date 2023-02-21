@@ -16,9 +16,10 @@ module.exports = {
         'very-light-gray': '#CED2DE'
       },
       backgroundImage: {
-        'welcome-background': 'url(\'/assets/images/background.png\')',
+        'welcome-background': 'url(\'/assets/images/backgroundWelcome.png\')',
         'welcome-background-mobile':
-          'url(\'/assets/images/background-mobile.png\')'
+          'url(\'/assets/images/backgroundWelcomeMobile.png\')',
+        'home-background-mobile': 'url(\'/assets/images/homeMobile.png\')'
       }
     }
   }
