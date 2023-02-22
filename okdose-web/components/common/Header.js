@@ -1,13 +1,14 @@
-import okdoseLogo from '../../assets/images/icons/okdoseLogo.svg';
+import okdoseLogo from '@icons/okdoseLogo.svg';
 import PropTypes from 'prop-types';
 
 function Header ({type}) {
   const stylesHeader = {
-    welcome: '',
-    home: 'flex flex-col items-center w-full h-56 pt-52 bg-no-repeat bg-cover bg-home-background-mobile'
+    home: 'flex flex-col items-center w-full h-56 pt-52 bg-no-repeat bg-cover bg-home-background-mobile',
+    welcome: null
   };
+
   return (
-    <div data-testid='header' className={`${stylesHeader[type]}`}>
+    <div data-testid='header' className={stylesHeader[type]}>
       <img
         src={okdoseLogo}
         className='w-56'
@@ -18,12 +19,8 @@ function Header ({type}) {
   );
 }
 
-Header.defaultProps = {
-  type: ''
-};
-
 Header.propTypes = {
-  type: PropTypes.string
+  type: PropTypes.string.isRequired
 };
 
 export default Header;
