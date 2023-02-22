@@ -5,7 +5,7 @@ function FooterButton ({title}) {
     <>
       <button
         className='flex flex-col items-center justify-center mt-5 bg-light-blue
-        text-gray-700 not-italic font-semibold text-sm p-3 w-full'
+        text-gray-700 not-italic font-semibold text-sm p-3 w-full hover:bg-dark-blue'
       >
         {title}
       </button>
