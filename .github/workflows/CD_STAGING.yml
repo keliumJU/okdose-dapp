@@ -1,0 +1,45 @@
+name: OKDOSE dApp - CD staging
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy to staging
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.DAPP_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.DAPP_AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ${{ secrets.DAPP_AWS_REGION }}
+      SOURCE_DIR: 'okdose-web/dist'
+      PATHS: "/*"
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: "Install dependencies"
+        run: yarn ci-ui
+
+      - name: "Clean the build"
+        run: yarn build:clean
+
+      - name: "Build the project"
+        run: yarn build
+
+      - name: Deploy to staging if branch is main
+        if: github.ref == 'refs/heads/main'
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.DAPP_AWS_S3_STAGING_BUCKET }}
+
+      - name: Invalidate Staging CloudFront
+        if: github.ref == 'refs/heads/main'
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.DAPP_STAGING_DISTRIBUTION }}
