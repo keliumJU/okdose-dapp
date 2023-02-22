@@ -5,6 +5,9 @@ import arrowRightIcon from '@icons/arrowRightIcon.svg';
 import PropTypes from 'prop-types';
 import {t} from 'i18next';
 
+const MIN_BOUND = 3;
+const MAX_BOUND = 200;
+
 function CardInputWeight ({
   titleContent,
   description,
@@ -91,7 +94,9 @@ function CardInputWeight ({
 CardInputWeight.defaultProps = {
   showCategoryIcon: false,
   showTitleCard: false,
-  disableComponent: false
+  disableComponent: false,
+  lowerBound: MIN_BOUND,
+  upperBound: MAX_BOUND
 };
 
 CardInputWeight.propTypes = {
@@ -100,8 +105,8 @@ CardInputWeight.propTypes = {
   showCategoryIcon: PropTypes.bool,
   showTitleCard: PropTypes.bool,
   titleCard: PropTypes.string,
-  upperBound: PropTypes.number.isRequired,
-  lowerBound: PropTypes.number.isRequired,
+  upperBound: PropTypes.number,
+  lowerBound: PropTypes.number,
   disableComponent: PropTypes.bool
 };
 

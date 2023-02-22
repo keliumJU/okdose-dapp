@@ -84,7 +84,7 @@ describe('It renders of CardInputWeight component', () => {
       )
     ).toBeDefined();
 
-    expect(screen.getByText('Categoria')).toBeInTheDocument();
+    expect(screen.getByText('Categoría')).toBeInTheDocument();
     expect(screen.getByText('Selección')).toBeInTheDocument();
     expect(
       screen.getByText(
@@ -101,23 +101,21 @@ describe('It renders of CardInputWeight component', () => {
         <CardInputWeight
           titleContent={t('app_info.card_selection_title')}
           description={t('app_info.input_weight_description', {weight: '10'})}
-          lowerBound={10}
-          upperBound={50}
         />
       </I18nextProvider>
     );
     const input = screen.getByLabelText('weight-input');
-    fireEvent.change(input, {target: {value: 9}});
+    fireEvent.change(input, {target: {value: 2}});
     expect(
       screen.getByText(
-        'The weight can not be less than 10 kg enter a valid entry.'
+        'The weight can not be less than 3 kg enter a valid entry.'
       )
     );
 
-    fireEvent.change(input, {target: {value: 51}});
+    fireEvent.change(input, {target: {value: 201}});
     expect(
       screen.getByText(
-        'The weight can not be greater than 50 kg enter a valid entry.'
+        'The weight can not be greater than 200 kg enter a valid entry.'
       )
     );
   });

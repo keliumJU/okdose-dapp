@@ -89,7 +89,7 @@ describe('It renders the Home component', () => {
         'Selecciona uno de los tipos de enfermedad para calcular su dosificación'
       )
     ).toBeInTheDocument();
-    expect(screen.getByText('Categoria')).toBeInTheDocument();
+    expect(screen.getByText('Categoría')).toBeInTheDocument();
     expect(screen.getByText('Políticas y regulaciones')).toBeInTheDocument();
     expect(screen.getByText('Créditos')).toBeInTheDocument();
   });

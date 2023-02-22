@@ -38,8 +38,6 @@ function Home () {
               description={t('app_info.input_weight_description', {
                 weight: '5'
               })}
-              lowerBound={5}
-              upperBound={50}
               disableComponent={false}
             />
           </div>

@@ -11,7 +11,7 @@ function Button ({type, title, disabled}) {
   return (
     <button
       disabled={disabled}
-      className={`${buttonStyles[type]}  not-italic font-semibold text-base text-center text-white flex flex-row justify-center items-center px-6 gap-2`}
+      className={`${buttonStyles[type]} not-italic font-semibold text-base text-center text-white flex flex-row justify-center items-center px-6 gap-2`}
     >
       {type === 'back' && <img src={backArrowIcon} alt='icon-back' />}
       {title}
