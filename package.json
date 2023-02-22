@@ -10,7 +10,7 @@
     "lint:fix": "cd okdose && yarn eslint --fix . && cd .. && cd okdose-web && yarn eslint --fix .",
     "format": "prettier --write './**/*.{js,jsx,ts,css,json}' --config ./.prettierrc && yarn lint:fix",
     "test": "cd okdose-web && yarn test && cd .. && cd okdose && yarn test && cd .. && cd integration-tests && yarn test",
-    "ci-ui": "cd okdose-web && yarn install --frozen-lockfile",
+    "ci-ui": "cd okdose-web && yarn install --frozen-lockfile && cd .. && cd okdose && yarn install --frozen-lockfile",
     "build:clean": "cd okdose-web && rm -rf ./dist"
   },
   "devDependencies": {
