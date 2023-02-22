@@ -30,13 +30,17 @@ function Home () {
             <DropdownMenu />
           </aside>
           <main>
-            <CardInputWeight
-              titleContent={t('app_info.card_selection_title')}
-              description={t('app_info.input_weight_description', {weight: '5'})}
-              lowerBound={5}
-              upperBound={50}
-              disableComponent={false}
-            />
+            <div className='hidden'>
+              <CardInputWeight
+                titleContent={t('app_info.card_selection_title')}
+                description={t('app_info.input_weight_description', {
+                  weight: '5'
+                })}
+                lowerBound={5}
+                upperBound={50}
+                disableComponent={false}
+              />
+            </div>
           </main>
         </div>
         <footer className='mt-auto px-5'>

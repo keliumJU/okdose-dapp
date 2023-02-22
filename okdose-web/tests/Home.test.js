@@ -11,8 +11,7 @@ describe('It renders the Home component', () => {
 
   test('Header displays the logo image', () => {
     render(<Home />);
-
-    //A double image is rendered because the <Helper /> component is rendered in the <Welcome> component and the <Home /> component.
+    //A double image is rendered because the <Header /> component is rendered in the <Welcome> and <Home /> component.
     //Now, it should be noted that the <Home /> component calls the <Welcome /> component.
     const logo = screen.getAllByTestId('logo-image');
     expect(logo[0]).toHaveAttribute('alt', 'logo');
