@@ -1,5 +1,6 @@
 {
   "app_info": {
+    "dropdown_description": "Select one of the disease types to calculate its dosage",
     "weight_button": "Calculate",
     "back_button": "Back",
     "see_more": "See more",

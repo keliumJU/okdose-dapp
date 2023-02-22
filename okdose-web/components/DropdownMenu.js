@@ -31,7 +31,7 @@ function DropdownMenu () {
   ));
 
   return (
-    <div className='m-auto w-full sm:m-auto sm:w-[420px] sm:h-[180px] sm:z-10'>
+    <div className='m-auto w-full mb-5 sm:m-auto sm:w-[420px] sm:h-[180px] sm:z-10'>
       <img src='' />
       {listSections}
     </div>

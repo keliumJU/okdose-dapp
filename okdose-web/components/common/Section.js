@@ -27,7 +27,11 @@ function Section ({
           {isExpanded}
           <h6 className='text-xl uppercase'>{title}</h6>
           <div className='ml-auto'>
-            <img src={downIcon} className='w-5 h-5' alt='icon-right' />
+            <img
+              src={downIcon}
+              className='min-w-min max-h-min'
+              alt='icon-right'
+            />
           </div>
         </div>
       </div>

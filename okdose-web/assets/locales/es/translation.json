@@ -1,5 +1,6 @@
 {
   "app_info": {
+    "dropdown_description": "Selecciona uno de los tipos de enfermedad para calcular su dosificación",
     "weight_button": "Calcular",
     "back_button": "Volver",
     "see_more": "Ver más",

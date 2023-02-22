@@ -1,19 +1,13 @@
-import DisplayCardInformation from '../components/common/DisplayCardInformation';
-import PrescriptionView from '../components/PrescriptionView';
 import {useEffect, useState} from 'react';
-import {Wallet} from '../near/nearWallet';
-import NearInterface from '../near/nearInterface';
-import {prescribeMiltefosine} from '../../okdose/transmission-types/transmitted-by-vectors/leishmaniasis';
 import Welcome from '../components/Welcome';
 import DropdownMenu from '../components/DropdownMenu';
 import CardInputWeight from '../components/CardInputWeight';
+import Header from 'components/common/Header';
+import Footer from 'components/common/Footer';
 import {t} from 'i18next';
 
 function Home () {
-  const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
-  const [prescription, setPrescription] = useState({});
-  const [loadWelcome, setLoadWelcome] = useState(false);
-  const DEFAULT_WEIGHT = 70;
+  const [loadWelcome, setLoadWelcome] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,44 +15,38 @@ function Home () {
     }, 2000);
   }, []);
 
-  useEffect(() => {
-    const getPrescription = async () => {
-      await wallet.startUp();
-      const nearInterface = new NearInterface({walletToUse: wallet});
-      const response = await prescribeMiltefosine(
-        nearInterface,
-        DEFAULT_WEIGHT
-      );
-      const result = await response;
-      setPrescription(result);
-    };
-    getPrescription().catch((e) => {
-      console.error(e);
-    });
-  }, []);
-
   return (
-    <div className='static'>
-      {loadWelcome ? (
-        <>
-          <Welcome />
-        </>
-      ) : (
-        <div className='flex flex-col justify-center items-center'>
-          <h1>OKdose</h1>
-          <CardInputWeight
-            titleContent={t('app_info.card_selection_title')}
-            description={t('app_info.input_weight_description', {weight: '5'})}
-            lowerBound={5}
-            upperBound={50}
-            disableComponent={false}
-          />
-          <DisplayCardInformation prescription={prescription} />
-          <DisplayCardInformation prescription={prescription} />
-          <PrescriptionView prescription={prescription} />
-          <DropdownMenu />
+    <div>
+      {loadWelcome && <Welcome />}
+      <div>
+        <header className='mb-16'>
+          <Header type='home' />
+        </header>
+        <div className='flex flex-col'>
+          <aside>
+            <p className='mb-2 p-5 text-dark-gray text-center'>
+              {t('app_info.dropdown_description')}
+            </p>
+            <DropdownMenu />
+          </aside>
+          <main>
+            <div className='hidden'>
+              <CardInputWeight
+                titleContent={t('app_info.card_selection_title')}
+                description={t('app_info.input_weight_description', {
+                  weight: '5'
+                })}
+                lowerBound={5}
+                upperBound={50}
+                disableComponent={false}
+              />
+            </div>
+          </main>
         </div>
-      )}
+        <footer className='mt-auto px-5'>
+          <Footer showExtraInfo={true} />
+        </footer>
+      </div>
     </div>
   );
 }
