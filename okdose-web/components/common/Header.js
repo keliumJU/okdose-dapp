@@ -1,4 +1,5 @@
 import okdoseLogo from '../../assets/images/icons/okdoseLogo.svg';
+import PropTypes from 'prop-types';
 
 function Header ({type}) {
   const stylesHeader = {
@@ -16,5 +17,13 @@ function Header ({type}) {
     </div>
   );
 }
+
+Header.defaultProps = {
+  type: ''
+};
+
+Header.propTypes = {
+  type: PropTypes.string
+};
 
 export default Header;
