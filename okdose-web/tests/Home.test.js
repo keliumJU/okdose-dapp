@@ -42,9 +42,16 @@ describe('It renders the Home component', () => {
     ).toBeDefined();
     expect(
       screen.getByText(
+        i18n.getDataByLanguage('en').translation.app_info.card_category_title
+      )
+    ).toBeDefined();
+    expect(
+      screen.getByText(
         'Select one of the disease types to calculate its dosage'
       )
     ).toBeInTheDocument();
+
+    expect(screen.getByText('Category')).toBeInTheDocument();
     expect(screen.getByText('Politics and regulations')).toBeInTheDocument();
     expect(screen.getByText('Credits')).toBeInTheDocument();
   });
@@ -73,9 +80,16 @@ describe('It renders the Home component', () => {
     ).toBeDefined();
     expect(
       screen.getByText(
+        i18n.getDataByLanguage('es').translation.app_info.card_category_title
+      )
+    ).toBeDefined();
+
+    expect(
+      screen.getByText(
         'Selecciona uno de los tipos de enfermedad para calcular su dosificación'
       )
     ).toBeInTheDocument();
+    expect(screen.getByText('Categoría')).toBeInTheDocument();
     expect(screen.getByText('Políticas y regulaciones')).toBeInTheDocument();
     expect(screen.getByText('Créditos')).toBeInTheDocument();
   });

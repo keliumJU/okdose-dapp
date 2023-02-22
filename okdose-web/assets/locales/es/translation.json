@@ -11,7 +11,7 @@
     "input_err_lower_bound": "El peso no puede ser menor a {{weight}} kg ingresa un dato valido",
     "input_err_upper_bound": "El peso no puede ser mayor a {{weight}} kg ingresa un dato valido.",
     "card_selection_title": "Selección",
-    "card_category_title": "Categoria",
+    "card_category_title": "Categoría",
     "card_dose_title": "Dosificación",
     "card_results_title": "Resultados"
   },

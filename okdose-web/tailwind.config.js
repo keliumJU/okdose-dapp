@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'silver-gray': '#838383',
         'light-blue': '#BFDBFE',
+        'dark-blue': '#aac3e3',
         'light-red': '#FFD9D9',
         'strong-red': '#DC2626',
         'light-gray': '#525C7A',
@@ -19,7 +20,11 @@ module.exports = {
         'welcome-background': 'url(\'/assets/images/backgroundWelcome.png\')',
         'welcome-background-mobile':
           'url(\'/assets/images/backgroundWelcomeMobile.png\')',
-        'home-background-mobile': 'url(\'/assets/images/homeMobile.png\')'
+        'home-background-mobile': 'url(\'/assets/images/homeMobile.png\')',
+        'home-background-desktop':
+          'url(\'/assets/images/backgroundHomeDesktop.png\')',
+        'home-background-medium':
+          'url(\'/assets/images/backgroundHomeDesktopMedium.png\')'
       }
     }
   }
