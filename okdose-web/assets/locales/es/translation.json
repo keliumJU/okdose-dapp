@@ -12,8 +12,13 @@
     "input_err_upper_bound": "El peso no puede ser mayor a {{weight}} kg ingresa un dato valido.",
     "card_selection_title": "Selección",
     "card_category_title": "Categoría",
-    "card_dose_title": "Dosificación",
-    "card_results_title": "Resultados"
+    "card_results_title": "Resultados",
+    "card_info": {
+      "warning": "Advertencia",
+      "dose": "Dosificación",
+      "treatment_time": "Tiempo de tratamiento",
+      "preparation": "Preparacion"
+    }
   },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitidas por Vectores",

@@ -63,7 +63,7 @@ function CardInputWeight ({
           {titleCard}
         </div>
       )}
-      <div className='flex flex-col justify-center items-center max-w-sm lg:max-w-lg bg-white p-10 px-20 text-center'>
+      <div className='flex flex-col justify-center items-center md:max-w-md lg:max-w-lg bg-white p-10 px-20 text-center'>
         <h1 className='w-64 h-9 text-indigo-700 font-medium text-3xl mb-2'>
           {titleContent}
         </h1>

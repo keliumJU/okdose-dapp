@@ -12,8 +12,13 @@
     "input_err_upper_bound": "The weight can not be greater than {{weight}} kg enter a valid entry.",
     "card_selection_title": "Selection",
     "card_category_title": "Category",
-    "card_dose_title": "Dosage",
-    "card_results_title": "Results"
+    "card_results_title": "Results",
+    "card_info": {
+      "warning": "Warning",
+      "dose": "Dosage",
+      "treatment_time": "Treatment time",
+      "preparation": "Preparation"
+    }
   },
   "transmission_types": {
     "transmitted_by_vectors": "Transmitted by Vectors",
