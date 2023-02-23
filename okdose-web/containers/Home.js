@@ -8,6 +8,7 @@ import {t} from 'i18next';
 import DisplayCardInformation from 'components/common/DisplayCardInformation';
 import timerIcon from '@icons/timerIcon.svg';
 import warningIcon from '@icons/warningIcon.svg';
+import {info, warning} from '../constants';
 
 function Home () {
   const [loadWelcome, setLoadWelcome] = useState(true);
@@ -45,21 +46,21 @@ function Home () {
             />
             <div className='pt-5'>
               <DisplayCardInformation
-                type='warning'
+                type={warning}
                 title={'card_info.warning'}
                 description='leishmaniasis.miltefosine.warning_under_10_kg'
                 showIcon={true}
                 cardIcon={warningIcon}
               />
               <DisplayCardInformation
-                type='info'
+                type={info}
                 title={'card_info.dose'}
                 description={'6.0 ml(600mg) IM every day'}
                 showIcon={true}
                 cardIcon={timerIcon}
               />
               <DisplayCardInformation
-                type='info'
+                type={info}
                 title={'leishmaniasis.miltefosine.name'}
                 description={
                   'Amp 1500 mg x 5ml (sb5 + 405 mg) \n Dosage max: (20 mg/kg/day)'
@@ -67,7 +68,7 @@ function Home () {
                 showViewMore={true}
               />
               <DisplayCardInformation
-                type='info'
+                type={info}
                 title={'leishmaniasis.n_metil_glucamine.name'}
                 description={'Vial 300 mg, 60 mg/ml \n (4 mg/kg/day)'}
                 showViewMore={true}
