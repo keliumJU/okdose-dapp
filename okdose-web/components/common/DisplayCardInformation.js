@@ -6,11 +6,10 @@ function DisplayCardInformation ({
   title,
   description,
   showViewMore,
-  showDoseIcon,
-  cardDoseIcon,
+  showIcon,
+  cardIcon,
   type
 }) {
-
   const {t} = useTranslation();
 
   const cardStyles = {
@@ -22,15 +21,15 @@ function DisplayCardInformation ({
     <div className='w-full px-5 pb-5 pt-0 mb-1'>
       <div>
         <div className={`${cardStyles[type]} flex text-lg font-bold`}>
-          {showDoseIcon && <img className='pr-3' src={cardDoseIcon} />}
+          {showIcon && <img className='pr-3' src={cardIcon} />}
           <h1>{t(`${title}`)}</h1>
         </div>
-        <div className='py-5 text-sm font-normal'>
-          <p>{t(`${description}`)}</p>
+        <div className='py-5 text-sm'>
+          <p className='whitespace-pre-line'>{t(`${description}`)}</p>
         </div>
       </div>
       {showViewMore && (
-        <div className='flex flex-row justify-end items-center text-sm not-itali font-normal mb-5'>
+        <div className='flex flex-row justify-end items-center text-sm mb-5'>
           <p>{t('app_info.see_more')}</p>
           <img className='pl-1' src={forwardArrowIcon} alt='icon-next' />
         </div>
@@ -42,15 +41,15 @@ function DisplayCardInformation ({
 
 DisplayCardInformation.defaultProps = {
   showViewMore: false,
-  showDoseIcon: false,
+  showIcon: false
 };
 
 DisplayCardInformation.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   showViewMore: PropTypes.bool,
-  showDoseIcon: PropTypes.bool,
-  cardDoseIcon: PropTypes.string,
+  showIcon: PropTypes.bool,
+  cardIcon: PropTypes.string,
   type: PropTypes.string.isRequired
 };
 

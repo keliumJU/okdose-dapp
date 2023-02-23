@@ -9,19 +9,19 @@ import {I18nextProvider} from 'react-i18next';
 
 dotenv.config({path: join(__dirname, '../', '.env')});
 
-describe('It renders of DisplayCardInformation component', () => {
+describe('It renders DisplayCardInformation component', () => {
   let miltefosine;
   beforeEach(() => {
     miltefosine = {
       name: 'leishmaniasis.miltefosine.name',
       presentation: 'leishmaniasis.miltefosine.presentation',
-      warning: 'leishmaniasis.miltefosine.warning_under_150_mg',
+      warning: 'leishmaniasis.miltefosine.warning_under_150_mg'
     };
   });
   // unmount and cleanup DOM after the test is finished.
   afterEach(cleanup);
 
-  test('DisplayCardInformation component renders with translations in English', () => {
+  test('DisplayCardInformation component renders with English translations when type is warning', () => {
     i18n.changeLanguage('en');
     render(
       <I18nextProvider i18n={i18n}>
@@ -43,7 +43,7 @@ describe('It renders of DisplayCardInformation component', () => {
     ).toBeInTheDocument();
   });
 
-  test('DisplayCardInformation component renders with translations in Spanish', () => {
+  test('DisplayCardInformation component renders with Spanish translations when type is warning', () => {
     i18n.changeLanguage('es');
     render(
       <I18nextProvider i18n={i18n}>
@@ -65,7 +65,7 @@ describe('It renders of DisplayCardInformation component', () => {
     ).toBeInTheDocument();
   });
 
-  test('DisplayCardInformation component renders with translations in English when type is info', () => {
+  test('DisplayCardInformation component renders with English translations when type is info', () => {
     i18n.changeLanguage('en');
     render(
       <I18nextProvider i18n={i18n}>
@@ -82,5 +82,23 @@ describe('It renders of DisplayCardInformation component', () => {
       )
     ).toBeDefined();
     expect(screen.getByText('Miltefosine')).toBeInTheDocument();
+  });
+  test('DisplayCardInformation component renders with Spanish translations when type is info', () => {
+    i18n.changeLanguage('es');
+    render(
+      <I18nextProvider i18n={i18n}>
+        <DisplayCardInformation
+          type='info'
+          title={miltefosine.name}
+          description={miltefosine.presentation}
+        />
+      </I18nextProvider>
+    );
+    expect(
+      screen.getByText(
+        i18n.getDataByLanguage('es').translation.leishmaniasis.miltefosine.name
+      )
+    ).toBeDefined();
+    expect(screen.getByText('Miltefosina')).toBeInTheDocument();
   });
 });

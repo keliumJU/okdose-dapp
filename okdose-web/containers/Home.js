@@ -6,44 +6,12 @@ import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
 import {t} from 'i18next';
 import DisplayCardInformation from 'components/common/DisplayCardInformation';
-import {transmissionTypes} from '../../okdose/app';
-import {Wallet} from '../near/nearWallet';
-import NearInterface from '../near/nearInterface';
 import timerIcon from '@icons/timerIcon.svg';
 import warningIcon from '@icons/warningIcon.svg';
 
 function Home () {
-  const wallet = new Wallet({createAccessKeyFor: process.env.MAIN_ACCOUNT});
   const [loadWelcome, setLoadWelcome] = useState(true);
-  const [miltefosine, setMiltefosine] = useState({});
-  const [nmetil, setNmetil] = useState({});
 
-  const DEFAULT_WEIGHT = 5;
-  const prescriptions =
-    transmissionTypes.byVectors.diseases.leishmaniasis.prescriptions;
-
-  useEffect(() => {
-    const getPrescription = async () => {
-      await wallet.startUp();
-      const nearInterface = new NearInterface({walletToUse: wallet});
-      let request = await prescriptions.prescribeMiltefosine(
-        nearInterface,
-        DEFAULT_WEIGHT
-      );
-      let response = await request;
-      setMiltefosine(response);
-
-      request = await prescriptions.prescribeNMetilGlucamine(
-        nearInterface,
-        DEFAULT_WEIGHT
-      );
-      response = await request;
-      setNmetil(response);
-    };
-    getPrescription().catch((e) => {
-      console.error(e);
-    });
-  }, []);
   useEffect(() => {
     setTimeout(() => {
       setLoadWelcome(false);
@@ -78,28 +46,30 @@ function Home () {
             <div className='pt-5'>
               <DisplayCardInformation
                 type='warning'
-                title={'app_info.card_info.warning'}
-                description={miltefosine.warning}
-                showDoseIcon={true}
-                cardDoseIcon={warningIcon}
+                title={'card_info.warning'}
+                description='leishmaniasis.miltefosine.warning_under_10_kg'
+                showIcon={true}
+                cardIcon={warningIcon}
               />
               <DisplayCardInformation
                 type='info'
-                title={'app_info.card_info.dose'}
-                description={miltefosine.weightDose}
-                showDoseIcon={true}
-                cardDoseIcon={timerIcon}
+                title={'card_info.dose'}
+                description={'6.0 ml(600mg) IM every day'}
+                showIcon={true}
+                cardIcon={timerIcon}
               />
               <DisplayCardInformation
                 type='info'
-                title={miltefosine.name}
-                description={miltefosine.preparation}
+                title={'leishmaniasis.miltefosine.name'}
+                description={
+                  'Amp 1500 mg x 5ml (sb5 + 405 mg) \n Dosage max: (20 mg/kg/day)'
+                }
                 showViewMore={true}
               />
               <DisplayCardInformation
                 type='info'
-                title={nmetil.name}
-                description={nmetil.preparation}
+                title={'leishmaniasis.n_metil_glucamine.name'}
+                description={'Vial 300 mg, 60 mg/ml \n (4 mg/kg/day)'}
                 showViewMore={true}
               />
             </div>
