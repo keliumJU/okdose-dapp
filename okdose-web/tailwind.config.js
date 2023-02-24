@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     './components/**/*.{js,jsx,ts,tsx}',
@@ -6,6 +8,10 @@ module.exports = {
     '*.{html,js}'
   ],
   theme: {
+    screens: {
+      '2md': '870px',
+      ...defaultTheme.screens
+    },
     extend: {
       colors: {
         'silver-gray': '#838383',

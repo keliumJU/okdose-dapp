@@ -26,14 +26,14 @@ function Home () {
         <Header type={HEADER_TYPES.home} />
       </header>
       <div className='mt-5 mb-16 w-full flex flex-col md:flex-row md:justify-center'>
-        <aside className='h-1/2 px-5 min-[870px]:pt-10 lg:pt-24'>
+        <aside className='h-1/2 px-5 2md:pt-10 lg:pt-24'>
           <p className='mb-2 p-5 text-dark-gray text-center'>
             {t('app_info.dropdown_description')}
           </p>
           <DropdownMenu />
         </aside>
         <main>
-          <div className='hidden min-[870px]:block md:px-10 md:pt-16 md:pb-5 lg:pt-28'>
+          <div className='hidden 2md:block md:px-10 md:pt-16 md:pb-5 lg:pt-28'>
             <CardInputWeight
               showCategoryIcon={true}
               showTitleCard={true}
