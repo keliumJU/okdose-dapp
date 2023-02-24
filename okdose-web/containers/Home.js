@@ -8,7 +8,7 @@ import {t} from 'i18next';
 import DisplayCardInformation from 'components/common/DisplayCardInformation';
 import timerIcon from '@icons/timerIcon.svg';
 import warningIcon from '@icons/warningIcon.svg';
-import {info, warning} from '../constants';
+import {HEADER_TYPES, CARD_TYPES} from '../constants';
 
 function Home () {
   const [loadWelcome, setLoadWelcome] = useState(true);
@@ -23,7 +23,7 @@ function Home () {
     <div className='items-center sm:bg-no-repeat sm:bg-home-background-medium lg:bg-cover'>
       {loadWelcome && <Welcome />}
       <header className='mb-16'>
-        <Header type='home' />
+        <Header type={HEADER_TYPES.home} />
       </header>
       <div className='mt-5 mb-16 w-full flex flex-col md:flex-row md:justify-center'>
         <aside className='h-1/2 px-5 min-[870px]:pt-10 lg:pt-24'>
@@ -46,32 +46,34 @@ function Home () {
             />
             <div className='pt-5'>
               <DisplayCardInformation
-                type={warning}
-                title={'card_info.warning'}
-                description='leishmaniasis.miltefosine.warning_under_10_kg'
+                type={CARD_TYPES.warning}
+                title={t('card_info.warning')}
+                description={t('leishmaniasis.miltefosine.warning_under_10_kg')}
                 showIcon={true}
                 cardIcon={warningIcon}
               />
               <DisplayCardInformation
-                type={info}
-                title={'card_info.dose'}
+                type={CARD_TYPES.info}
+                title={t('card_info.dose')}
                 description={'6.0 ml(600mg) IM every day'}
                 showIcon={true}
                 cardIcon={timerIcon}
               />
               <DisplayCardInformation
-                type={info}
-                title={'leishmaniasis.miltefosine.name'}
+                type={CARD_TYPES.info}
+                title={t('leishmaniasis.miltefosine.name')}
                 description={
                   'Amp 1500 mg x 5ml (sb5 + 405 mg) \n Dosage max: (20 mg/kg/day)'
                 }
                 showViewMore={true}
+                seeMore={t('app_info.see_more')}
               />
               <DisplayCardInformation
-                type={info}
-                title={'leishmaniasis.n_metil_glucamine.name'}
+                type={CARD_TYPES.info}
+                title={t('leishmaniasis.n_metil_glucamine.name')}
                 description={'Vial 300 mg, 60 mg/ml \n (4 mg/kg/day)'}
                 showViewMore={true}
+                seeMore={t('app_info.see_more')}
               />
             </div>
           </div>

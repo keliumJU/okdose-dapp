@@ -1,4 +1,8 @@
-const info = 'info';
-const warning = 'warning';
-
-export {info, warning};
+export const CARD_TYPES = {
+  info: 'info',
+  warning: 'warning'
+};
+export const HEADER_TYPES = {
+  welcome: 'welcome',
+  home: 'home'
+};

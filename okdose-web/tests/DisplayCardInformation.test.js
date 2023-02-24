@@ -6,6 +6,8 @@ import {join} from 'path';
 import DisplayCardInformation from '../components/common/DisplayCardInformation';
 import i18n from '../i18n';
 import {I18nextProvider} from 'react-i18next';
+import {t} from 'i18next';
+import {CARD_TYPES} from '../constants';
 
 dotenv.config({path: join(__dirname, '../', '.env')});
 
@@ -26,9 +28,9 @@ describe('It renders DisplayCardInformation component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <DisplayCardInformation
-          type='warning'
-          title={'app_info.card_info.warning'}
-          description={miltefosine.warning}
+          type={CARD_TYPES.warning}
+          title={t('app_info.card_info.warning')}
+          description={t(`${miltefosine.warning}`)}
         />
       </I18nextProvider>
     );
@@ -48,9 +50,9 @@ describe('It renders DisplayCardInformation component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <DisplayCardInformation
-          type='warning'
-          title={'app_info.card_info.warning'}
-          description={miltefosine.warning}
+          type={CARD_TYPES.warning}
+          title={t('app_info.card_info.warning')}
+          description={t(`${miltefosine.warning}`)}
         />
       </I18nextProvider>
     );
@@ -70,9 +72,9 @@ describe('It renders DisplayCardInformation component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <DisplayCardInformation
-          type='info'
-          title={miltefosine.name}
-          description={miltefosine.presentation}
+          type={CARD_TYPES.info}
+          title={t(`${miltefosine.name}`)}
+          description={t(`${miltefosine.warning}`)}
         />
       </I18nextProvider>
     );
@@ -88,9 +90,9 @@ describe('It renders DisplayCardInformation component', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <DisplayCardInformation
-          type='info'
-          title={miltefosine.name}
-          description={miltefosine.presentation}
+          type={CARD_TYPES.info}
+          title={t(`${miltefosine.name}`)}
+          description={t(`${miltefosine.warning}`)}
         />
       </I18nextProvider>
     );
